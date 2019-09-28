@@ -155,6 +155,7 @@ public class CodePlayer {
             }
         }
         String result = sb.toString().replaceAll("^t_","");
+        result = result.replaceAll("_","");
         return StringUtils.capitalize(result);
     }
 
