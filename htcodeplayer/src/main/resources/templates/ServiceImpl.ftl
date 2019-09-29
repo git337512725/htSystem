@@ -1,15 +1,18 @@
-package ${package_name}.service.serviceimpl;
+package ${package_name}.service.serviceImpl;
 
 import ${package_name}.dao.${model_simple_name}Mapper;
 import ${package_name}.model.${model_simple_name};
-import ${package_name}.service.I${model_simple_name}Service;
+import ${package_name}.service.${model_simple_name}Service;
+import com.lz.ht.page.PageModel;
+import ${package_name}.util.ToolKit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.HashMap;
 
 @Service
-public class ${model_simple_name}ServiceImpl  implements I${model_simple_name}Service {
+public class ${model_simple_name}ServiceImpl  implements  ${model_simple_name}Service {
 
     @Autowired
     private ${model_simple_name}Mapper ${model_simple_name?uncap_first}Mapper;

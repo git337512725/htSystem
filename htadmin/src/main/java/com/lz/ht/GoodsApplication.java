@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * @author Administrator
  */
-@MapperScan("com.zs.goods.dao")
+@MapperScan("com.lz.ht.dao")
 @SpringBootApplication
 public class  GoodsApplication {
 

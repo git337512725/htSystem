@@ -47,7 +47,7 @@
     </select>
 
     <select id="findCount" parameterType="${package_name}.model.${model_simple_name}"  resultType="java.lang.Long">
-        select * from ${table_name} where 1=1
+        select count(*)  from ${table_name} where 1=1
             <#if model_columnList?exists>
                 <#list model_columnList as model>
                     <if test= "${model.changeColumnName?uncap_first} != null">
@@ -58,7 +58,7 @@
     </select>
 
     <select id="findCountByMap" parameterType="java.util.HashMap"   resultType="java.lang.Long" >
-        select * from ${table_name} where 1=1
+        select count(*) from ${table_name} where 1=1
         <#if model_columnList?exists>
             <#list model_columnList as model>
                 <if test= "${model.changeColumnName?uncap_first} != null">

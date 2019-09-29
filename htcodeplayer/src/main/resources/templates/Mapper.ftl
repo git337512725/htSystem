@@ -1,11 +1,13 @@
 package ${package_name}.dao;
 
 import ${package_name}.model.${model_simple_name};
-
+import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.HashMap;
+import org.apache.ibatis.annotations.Mapper;
 
-public interface I${model_simple_name}Mapper {
+@Mapper
+public interface ${model_simple_name}Mapper {
 
     void add(${model_simple_name} record);
 

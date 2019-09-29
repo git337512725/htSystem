@@ -83,6 +83,7 @@ public class PageModel<T> {
         this.currentPageNum = currentPageNum;
     }
 
+    public PageModel(){}
 
     public PageModel(long currentPageNum,long totalRecords ,List<T> recordList){
         this.currentPageNum  = currentPageNum;
@@ -159,4 +160,5 @@ public class PageModel<T> {
     public static void main(String[] args) {
         System.out.println((100011L == 1000L));
     }
+
 }

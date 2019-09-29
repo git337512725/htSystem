@@ -1,10 +1,11 @@
 package ${package_name}.service;
 
 import ${package_name}.model.${model_simple_name};
-
+import ${package_name}.page.PageModel;
 import java.util.List;
+import java.util.HashMap;
 
-public interface I${model_simple_name}Service {
+public interface ${model_simple_name}Service {
 
     void add(${model_simple_name} record);
 

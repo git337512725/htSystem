@@ -14,23 +14,15 @@ import java.util.*;
 public class CodePlayer {
 
 
+    public static String htSystemPath = "E:/kj/htSystem";
 
-    public static String outDir = "F:/codeplayer";
+    public static String outDir =  htSystemPath + "/htadmin/src/main/java";
 
     public static String basePackageName = "com.lz.ht";
-    // 包结构是    com.lz.ht.dao
-    //                      model
-    //                      controller
-    //                      service
-//                                  serviceimpl
-    //                      mapper
-    //
-    //
-    //
 
-    public static String defaultMapperDir =  outDir + "/mapper";
+    public static String defaultMapperDir = htSystemPath +  "/htadmin/src/main/resources/xml/mapper";
 
-    public static String defaultPageDir = outDir + "/page" ;
+    public static String defaultPageDir = htSystemPath +  "/htadmin/src/main/resources/templates" ;
 
     public static String layUICSS = "/alllayui/layui/css/layui.css";
 
@@ -232,7 +224,12 @@ public class CodePlayer {
         }
         System.out.println(createJavaFileName);
         Template template = FreeMarkerTemplateUtils.getTemplate(templateName);
-        String dir = createDir(outDir,  basePackageDirs + "/" + StringFirstToLower(templateName.substring(0, templateName.lastIndexOf('.'))));
+        String dir = "";
+        if(templateName.equalsIgnoreCase("ServiceImpl.ftl")){
+            dir =   createDir(outDir,  basePackageDirs + "/service/" + StringFirstToLower(templateName.substring(0, templateName.lastIndexOf('.'))));
+        }else{
+            dir = createDir(outDir,  basePackageDirs + "/" + StringFirstToLower(templateName.substring(0, templateName.lastIndexOf('.'))));
+        }
         FileOutputStream fileOutputStream = new FileOutputStream(new File(dir + "/" + createJavaFileName));
         Writer out = new BufferedWriter(new OutputStreamWriter(fileOutputStream, "utf-8"),10240);
         template.process(templateVars,out);
