@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.HashMap;
 import org.apache.ibatis.annotations.Mapper;
 
+//@Repository
 @Mapper
 public interface ${model_simple_name}Mapper {
 
@@ -16,6 +17,8 @@ public interface ${model_simple_name}Mapper {
     int deleteById(Integer ${model_simple_name}Id);
 
     List<${model_simple_name}> findAll();
+
+    List<${model_simple_name}> findList(${model_simple_name} record);
 
     long findCount(${model_simple_name} ${model_simple_name?uncap_first});
 

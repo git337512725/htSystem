@@ -49,7 +49,7 @@
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-            <ul class="layui-nav layui-nav-tree"  lay-filter="test" th:each="xtMenuDto : ${xtMenuList}"  >
+            <ul class="layui-nav layui-nav-tree"  lay-filter="test" th:each="module : ${modulesList}"  >
              <!--   <li class="layui-nav-item">
                     <a class="" href="javascript:;">插件设置</a>
                     <dl class="layui-nav-child">
@@ -60,9 +60,9 @@
                     </dl>
                 </li>-->
                 <li  class="layui-nav-item  layui-nav-itemed"   >
-                    <a href="javascript:;" th:text="${xtMenuDto.moduleName}" >常用功能</a>
-                    <dl class="layui-nav-child" th:each="sub,subStat : ${xtMenuDto.subResoureList}"  >
-                        <dd><a href="javascript:;"   class="site-demo-active"   th:attr="data-id=${subStat.count},data-title=${sub.name},data-url=${sub.getUrl()}"     data-type="tabAdd"  th:text="${sub.name}" >功能1</a></dd>
+                    <a href="javascript:;" th:text="${module['name']}" >常用功能</a>
+                    <dl class="layui-nav-child" th:each="sub,subStat : ${module['subMenu']}"  >
+                        <dd><a href="javascript:;"   class="site-demo-active"   th:attr="data-id=${subStat.count},data-title=${sub['name']},data-url=${'/'+sub['resUrl']}"     data-type="tabAdd"  th:text="${sub['name']}" >功能1</a></dd>
                     </dl>
                 </li>
                 <!--<li class="layui-nav-item"><a href="">云市场</a></li>-->

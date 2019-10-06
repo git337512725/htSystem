@@ -18,30 +18,9 @@ spring:
   profiles:
     active: local
   #jdbc配置
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/myboot?useUnicode=true&characterEncoding=UTF-8&useSSL=true&useAffectedRows=true&tinyInt1isBit=false&serverTimezone=GMT%2B8
-    username: root
-    password: root
-    max-idle: 10
-    max-wait: 10000
-    min-idle: 5
-    initial-size: 5
+  main:
+    allow-bean-definition-overriding: true
 
-  thymeleaf:
-    prefix: classpath:/templates/
-    suffix: .html
-    mode: HTML
-    encoding: UTF-8
-    cache: false
-    servlet:
-      content-type: text/html
-
-mybatis:
-  typeAliasesPackage: com.lz.ht.dao
-  mapperLocations: classpath:xml/mapper/*.xml
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 
   # druid 配置
@@ -130,3 +109,7 @@ mybatis:
   #shiro.loginUrl                                 /login.jsp      未经身份验证的用户重定向到登录页面时使用的登录URL
   #shiro.successUrl                                       /      用户登录后的默认登录页面（如果在当前会话中找不到替代）
   #shiro.unauthorizedUrl                                空值      页面将用户重定向到未授权的位置（403页）
+logging:
+  config: classpath:logback-spring.xml
+  path: ./logs/htadmin_log.log
+

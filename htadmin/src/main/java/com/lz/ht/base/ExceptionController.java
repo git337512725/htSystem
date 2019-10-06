@@ -1,6 +1,7 @@
-package com.lz.ht.controller;
+package com.lz.ht.base;
 
-import com.lz.ht.result.Result;
+import com.lz.ht.base.result.Result;
+import com.lz.ht.base.result.ResultUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.stereotype.Controller;
@@ -18,7 +19,7 @@ public class ExceptionController  implements ErrorController {
     @RequestMapping("/noToken")
     @ResponseBody
     public Result noToken(){
-        return Result.genNoTokenResult();
+        return ResultUtil.error("9999","NO_TOKEN");
     }
 
     @Override

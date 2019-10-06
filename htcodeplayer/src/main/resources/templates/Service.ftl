@@ -15,6 +15,10 @@ public interface ${model_simple_name}Service {
 
     List<${model_simple_name}> findAll();
 
+    ${model_simple_name} findOne(${model_simple_name} record);
+
+    List<${model_simple_name}> findList(${model_simple_name} record);
+
     List<${model_simple_name}> findPageList(PageModel<${model_simple_name}> page, ${model_simple_name} ${model_simple_name?uncap_first}) throws Exception;
 
     List<${model_simple_name}> findListByMapLimit(HashMap<String,Object> hashMap, long first, long last);

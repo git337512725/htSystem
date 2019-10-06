@@ -6,12 +6,14 @@ import ${package_name}.service.${model_simple_name}Service;
 import com.lz.ht.page.PageModel;
 import ${package_name}.util.ToolKit;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
-
+import org.apache.ibatis.exceptions.TooManyResultsException;
 import java.util.List;
 import java.util.HashMap;
 
 @Service
+@Transactional(rollbackFor = Exception.class)
 public class ${model_simple_name}ServiceImpl  implements  ${model_simple_name}Service {
 
     @Autowired
@@ -37,6 +39,23 @@ public class ${model_simple_name}ServiceImpl  implements  ${model_simple_name}Se
         return ${model_simple_name?uncap_first}Mapper.findAll();
     }
 
+
+    @Override
+    public ${model_simple_name} findOne(${model_simple_name} record) {
+        List<${model_simple_name}>  list = ${model_simple_name?uncap_first}Mapper.findList(record);
+        if ((list!=null)&&(list.size() == 1)) {
+            return list.get(0);
+        } else if ((list!=null)&&(list.size() > 1)) {
+            throw new TooManyResultsException("Expected one result (or null) to be returned by selectOne(), but found: " + list.size());
+        } else {
+            return null;
+        }
+    }
+
+    @Override
+    public List<${model_simple_name}> findList(${model_simple_name} record){
+         return  ${model_simple_name?uncap_first}Mapper.findList(record);
+    }
 
     @Override
     public List<${model_simple_name}> findPageList(PageModel<${model_simple_name}> page, ${model_simple_name} ${model_simple_name?uncap_first}) throws Exception {

@@ -83,7 +83,17 @@ public class PageModel<T> {
         this.currentPageNum = currentPageNum;
     }
 
-    public PageModel(){}
+    public PageModel(){
+        init();
+    }
+    public void init(){
+        if(currentPageNum == 0L){
+            currentPageNum = 1L;
+            this.pageSize = DEFAULT_PAGE_SIZE;
+            this.msFirst = 0L;
+            this.msLast = DEFAULT_PAGE_SIZE;
+        }
+    }
 
     public PageModel(long currentPageNum,long totalRecords ,List<T> recordList){
         this.currentPageNum  = currentPageNum;

@@ -6,7 +6,7 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" th:href="@{${layui_css}"  media="all">
+    <link rel="stylesheet" th:href="@{${layui_css}}"  media="all">
     <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
 </head>
 <body>
@@ -35,6 +35,7 @@
         table.render({
             elem: '#${model_simple_name}'
             ,url:'${list_url}'
+            ,method: 'post'
             ,toolbar: '#toolbarDemo' //开启头部工具栏，并为其绑定左侧模板
             ,defaultToolbar: ['filter', 'exports', 'print', { //自定义头部工具栏右侧图标。如无需自定义，去除该参数即可
                 title: '提示'
@@ -42,16 +43,31 @@
                 ,icon: 'layui-icon-tips'
             }]
             ,title: '${model_simple_name}'
-            ,cols: [[
+            ,cols: [
+                [
                 {type: 'checkbox', fixed: 'left'}
             <#if model_columnList?exists>
               <#list model_columnList as model>
-              ,{field: ${r"'"}${model.changeColumnName?uncap_first}${r"'"}, title:${r"'"}${model.columnComment}${r"'"}, width:80}
+              ,{field: ${r"'"}${model.changeColumnName?uncap_first}${r"'"}, title:${r"'"}${model.columnComment}${r"'"},  align:'center' }
               </#list>
             </#if>
-              ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
-            ]]
+              ,{fixed: 'right', title:'操作', toolbar: '#barDemo'}
+            ]
+            ]
             ,page: true
+            ,request: {
+                pageName: 'currentPageNum' //页码的参数名称，默认：page
+                ,limitName: 'pageSize' //每页数据量的参数名，默认：limit
+            }
+            ,parseData: function(res){ //res 即为原始返回的数据
+                return {
+                    "code": 0, //解析接口状态
+                    "msg": "", //解析提示文本
+                    "count": res.totalRecords, //解析数据长度
+                    "data": res.recordList //解析数据列表
+                };
+            }
+
         });
 
         //头工具栏事件
@@ -106,7 +122,7 @@
     }
 
     function del(objId){
-        $.post("${list_delete}",{"id",objId},function (data) {
+        $.post("${list_delete}",{"id":objId},function (data) {
             layer.msg(data);
         },"json");
     }

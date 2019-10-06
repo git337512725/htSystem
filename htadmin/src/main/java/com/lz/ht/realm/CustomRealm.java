@@ -1,93 +1,88 @@
 package com.lz.ht.realm;
 
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.authc.AuthenticationInfo;
-import org.apache.shiro.authc.AuthenticationToken;
-import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
+import com.lz.ht.dao.UserMapper;
+import com.lz.ht.model.User;
+import com.lz.ht.model.UserRole;
+import com.lz.ht.service.UserRoleService;
+import com.lz.ht.service.UserService;
+import com.lz.ht.util.MD5Util;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
-import org.apache.shiro.crypto.hash.Sha256Hash;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.springframework.beans.factory.annotation.Autowired;
 
-/**
- * 这个类是参照JDBCRealm写的，主要是自定义了如何查询用户信息，如何查询用户的角色和权限，如何校验密码等逻辑
- * @author Administrator
- */
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class CustomRealm extends AuthorizingRealm {
+    private UserService userService;
+    private UserRoleService userRoleService;
 
+    @Autowired
+    private void setUserService(UserService userService) {
+        this.userService = userService;
+    }
+    @Autowired
+    private void setUserRoleService(UserRoleService userRoleService) {
+        this.userRoleService = userRoleService;
+    }
 
-    /***
-     * <bean id="credentialsMatcher"
-     *         class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
-     *   		<!-- 加密方式 -->
-     *         <property name="hashAlgorithmName" value="MD5" />
-     *   		<!-- 加密次数 -->
-     *         <property name="hashIterations" value="2" />
-     *   		<!-- 存储散列后的密码是否为16进制 -->
-     *         <property name="storedCredentialsHexEncoded" value="true" />
-     * </bean>
+    /**
+     * 获取身份验证信息
+     * Shiro中，最终是通过 Realm 来获取应用程序中的用户、角色及权限信息的。
+     *
+     * @param authenticationToken 用户身份信息 token
+     * @return 返回封装了用户信息的 AuthenticationInfo 实例
      */
-
-    //告诉shiro如何根据获取到的用户信息中的密码和盐值来校验密码
-    {
-        //设置用于匹配密码的CredentialsMatcher
-        HashedCredentialsMatcher hashMatcher = new HashedCredentialsMatcher();
-        //加密方式
-        hashMatcher.setHashAlgorithmName(Sha256Hash.ALGORITHM_NAME);
-        hashMatcher.setStoredCredentialsHexEncoded(false);
-        //加密次数
-        hashMatcher.setHashIterations(1024);
-        this.setCredentialsMatcher(hashMatcher);
-    }
-
-
-    //定义如何获取用户的角色和权限的逻辑，给shiro做权限判断
     @Override
-    protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
-        //null usernames are invalid
-//        if (principals == null) {
-//            throw new AuthorizationException("PrincipalCollection method argument cannot be null.");
-//        }
-//        SysUserDto user = (SysUserDto) getAvailablePrincipal(principals);
-//        SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
-//        System.out.println("获取角色信息：" + user.getRoleTips());
-//        System.out.println("获取权限信息：" + user.getMenuCodes());
-//        info.setRoles(user.getRoleTips());
-//        info.setStringPermissions(user.getMenuCodes());
-//        return info;
-        return  null;
+    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
+        System.out.println("————身份认证方法————");
+        UsernamePasswordToken token = (UsernamePasswordToken) authenticationToken;
+        // 从数据库获取对应用户名密码的用户
+       // String password = userService.getPassword(token.getUsername());
+        User user = new User();
+        user.setUserName(token.getUsername());
+        User one = userService.findOne(user);
+        String password = one.getPassword();
+        String credentials = new String((char[]) token.getCredentials());
+        if (null == password) {
+            throw new AccountException("用户名不正确");
+        } else if (!password.equals(credentials)) {
+            throw new AccountException("密码不正确");
+        }
+        return new SimpleAuthenticationInfo(token.getPrincipal(), password, getName());
     }
 
-    //定义如何获取用户信息的业务逻辑，给shiro做登录
+    /**
+     * 获取授权信息
+     *
+     * @param principalCollection
+     * @return
+     */
     @Override
-    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
-//        UsernamePasswordToken upToken = (UsernamePasswordToken) token;
-//        String username = upToken.getUsername();
-//        // Null username is invalid
-//        if (username == null) {
-//            throw new AccountException("请输入用户名");
-//        }
-//        SysUserDto userDB = userService.findShiroUserByName(username);
-//        if (userDB == null) {
-//            throw new UnknownAccountException("用户不存在");
-//        }
-//        //查询用户的角色和权限存到SimpleAuthenticationInfo中，这样在其它地方
-//        //SecurityUtils.getSubject().getPrincipal()就能拿出用户的所有信息，包括角色和权限
-//        Set<String> roles = roleService.getRolesByUserId(userDB.getId());
-//        Set<String> perms = menuService.getResourcesByUserId(userDB.getId());
-////        userDB.getRoles().addAll(roles);
-////        userDB.getPerms().addAll(perms);
-//        userDB.setRoleTips(roles);
-//        userDB.setMenuCodes(perms);
-//        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(userDB, userDB.getPassword(), getName());
-//        info.setCredentialsSalt(new MySimpleByteSource(SysConstant.PUBLIC_SALT));
-//        return info;
-        return null;
+    protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
+        System.out.println("————权限认证————");
+        String username = (String) SecurityUtils.getSubject().getPrincipal();
+        SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
+        //获得该用户角色
+        //String role = userMapper.getRole(username);
+        User user = new User();
+        user.setUserName(username);
+        User one = userService.findOne(user);
+        UserRole userRole = new UserRole();
+        userRole.setUserId(one.getId());
+        List<UserRole> userRole2 = userRoleService.findList(userRole);
+        Set<String> set = new HashSet<>();
+        //需要将 role 封装到 Set 作为 info.setRoles() 的参数
+        userRole2.stream().forEach(r->{
+            set.add(r.getRoleKey());
+        });
+        //设置该用户拥有的角色
+        info.setRoles(set);
+        return info;
     }
-
-
-    public static void main(String[] args) {
-
-    }
-
 }

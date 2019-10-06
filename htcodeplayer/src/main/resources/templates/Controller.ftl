@@ -6,6 +6,7 @@ import ${package_name}.page.PageModel;
 import ${package_name}.result.Result;
 import ${package_name}.service.${model_simple_name}Service;
 import ${package_name}.util.JwtUtil;
+import ${package_name}.base.BaseController;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.SecurityUtils;
@@ -22,12 +23,20 @@ import javax.servlet.http.HttpServletResponse;
 
 @Slf4j
 @Controller
-public class ${model_simple_name}Controller {
+public class ${model_simple_name}Controller extends BaseController{
 
     @Autowired
     private ${model_simple_name}Service ${model_simple_name?uncap_first}ServiceImpl;
 
-    @RequestMapping(value = "${list_url}")
+
+    @RequestMapping(value = "${list_url}",method = {RequestMethod.GET})
+    public String ${model_simple_name?uncap_first}_list()throws Exception{
+        return "user/user_list";
+    }
+
+
+
+    @RequestMapping(value = "${list_url}",method = {RequestMethod.POST})
     @ResponseBody
     public PageModel list(${model_simple_name} ${model_simple_name?uncap_first}, PageModel page)throws Exception{
            List<${model_simple_name}> list = ${model_simple_name?uncap_first}ServiceImpl.findPageList(page,${model_simple_name?uncap_first});

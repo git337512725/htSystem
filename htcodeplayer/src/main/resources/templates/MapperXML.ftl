@@ -46,6 +46,18 @@
         select * from  ${table_name} t
     </select>
 
+
+    <select id="findList"  parameterType="${package_name}.model.${model_simple_name}" resultMap="baseResultMap">
+        select * from  ${table_name} t where 1=1
+        <#if model_columnList?exists>
+            <#list model_columnList as model>
+                <if test= "${model.changeColumnName?uncap_first} != null">
+                    and ${model.columnName} = ${r"#{"}${model.changeColumnName?uncap_first}${r"}"}
+                </if>
+            </#list>
+        </#if>
+    </select>
+
     <select id="findCount" parameterType="${package_name}.model.${model_simple_name}"  resultType="java.lang.Long">
         select count(*)  from ${table_name} where 1=1
             <#if model_columnList?exists>
