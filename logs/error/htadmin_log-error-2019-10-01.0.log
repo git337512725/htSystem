@@ -1,0 +1,71 @@
+2019-10-01 21:09:32.166 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'securityManager', defined in class path resource [org/apache/shiro/spring/config/web/autoconfigure/ShiroWebAutoConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [com/lz/ht/configuration/ShiroConfig.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2019-10-01 21:20:49.016 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'securityManager', defined in class path resource [org/apache/shiro/spring/config/web/autoconfigure/ShiroWebAutoConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [com/lz/ht/configuration/ShiroConfig.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2019-10-01 21:36:07.254 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'securityManager', defined in class path resource [org/apache/shiro/spring/config/web/autoconfigure/ShiroWebAutoConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [com/lz/ht/configuration/ShiroConfig.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2019-10-01 21:37:33.814 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'securityManager', defined in class path resource [org/apache/shiro/spring/config/web/autoconfigure/ShiroWebAutoConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [com/lz/ht/configuration/ShiroConfig.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2019-10-01 21:40:00.940 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method authorizationAttributeSourceAdvisor in org.apache.shiro.spring.boot.autoconfigure.ShiroAnnotationProcessorAutoConfiguration required a bean named 'authenticator' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'authenticator' in your configuration.
+

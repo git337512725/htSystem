@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>layout 后台大布局 - Layui</title>
+    <link rel="stylesheet" th:href="@{/alllayui/layui/css/layui.css}">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">xxx后台系统</div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item"><a href="">控制台</a></li>
+            <!--<li class="layui-nav-item"><a href="">系统管理</a></li> -->
+            <!--<li class="layui-nav-item">-->
+                <!--<a href="javascript:;">系统管理</a>-->
+                <!--<dl class="layui-nav-child">-->
+                    <!--<dd><a href="">用户管理</a></dd>-->
+                    <!--<dd><a href="">角色管理</a></dd>-->
+                    <!--<dd><a href="">菜单管理</a></dd>-->
+                <!--</dl>-->
+            <!--</li>-->
+            <!--<li class="layui-nav-item">-->
+                <!--<a href="javascript:;">其它系统</a>-->
+                <!--<dl class="layui-nav-child">-->
+                    <!--<dd><a href="">邮件管理</a></dd>-->
+                    <!--<dd><a href="">消息管理</a></dd>-->
+                    <!--<dd><a href="">授权管理</a></dd>-->
+                <!--</dl>-->
+            <!--</li>-->
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    贤心
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">退了</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree"  lay-filter="test" th:each="module : ${modulesList}"  >
+             <!--   <li class="layui-nav-item">
+                    <a class="" href="javascript:;">插件设置</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">打印插件</a></dd>
+                        <dd><a href="javascript:;">COM插件</a></dd>
+                        <dd><a href="javascript:;">插件三</a></dd>
+                        <dd><a href="">超链接</a></dd>
+                    </dl>
+                </li>-->
+                <li  class="layui-nav-item  layui-nav-itemed"   >
+                    <a href="javascript:;" th:text="${module['name']}" >常用功能</a>
+                    <dl class="layui-nav-child" th:each="sub,subStat : ${module['subMenu']}"  >
+                        <dd><a href="javascript:;"   class="site-demo-active"   th:attr="data-id=${subStat.count},data-title=${sub['name']},data-url=${'/'+sub['resUrl']}"     data-type="tabAdd"  th:text="${sub['name']}" >功能1</a></dd>
+                    </dl>
+                </li>
+                <!--<li class="layui-nav-item"><a href="">云市场</a></li>-->
+                <!--<li class="layui-nav-item"><a href="">发布商品</a></li>-->
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+            <div style="padding: 2px;" class="layui-tab" lay-filter="demo" lay-allowclose="true">
+                <ul class="layui-tab-title">
+                </ul>
+                <div class="layui-tab-content">
+                </div>
+            </div>
+    </div>
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        © layui.com - 底部固定区域
+    </div>
+</div>
+<script th:src="@{/alllayui/layui/layui.js}"></script>
+<script th:src="@{/system/index/index.js}" ></script>
+</body>
+</html>

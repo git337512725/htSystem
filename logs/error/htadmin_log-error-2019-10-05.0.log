@@ -1,0 +1,15 @@
+2019-10-05 21:24:05.032 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean named 'beanPostProcessor' that could not be found.
+
+
+Action:
+
+Consider defining a bean named 'beanPostProcessor' in your configuration.
+
