@@ -5,77 +5,35 @@
     <resultMap id="baseResultMap" type="com.lz.ht.model.Role"></resultMap>
 
     <insert id="add" parameterType="com.lz.ht.model.Role" >
-        insert into <trim prefix="(" suffix=")" suffixOverrides= ",">
-                    <if test= "id != null">
-                        id,
-                    </if>
-                    <if test= "roleKey != null">
-                        roleKey,
-                    </if>
-                    <if test= "roleDesc != null">
-                        roleDesc,
-                    </if>
-                    <if test= "pRoleKey != null">
-                        pRoleKey,
-                    </if>
-                    <if test= "pRoleDesc != null">
-                        pRoleDesc,
-                    </if>
-                    <if test= "enable != null">
-                        enable,
-                    </if>
-                    <if test= "sort != null">
-                        sort,
-                    </if>
+        insert into t_role <trim prefix="(" suffix=")" suffixOverrides= ",">
+                    <if test= "id != null">id,</if>
+                    <if test= "roleKey != null">roleKey,</if>
+                    <if test= "roleDesc != null">roleDesc,</if>
+                    <if test= "pRoleKey != null">pRoleKey,</if>
+                    <if test= "pRoleDesc != null">pRoleDesc,</if>
+                    <if test= "enable != null">enable,</if>
+                    <if test= "sort != null">sort,</if>
         </trim>
         values <trim prefix="(" suffix=")" suffixOverrides= ",">
-                    <if test= "id != null">
-                        #{id},
-                    </if>
-                    <if test= "roleKey != null">
-                        #{roleKey},
-                    </if>
-                    <if test= "roleDesc != null">
-                        #{roleDesc},
-                    </if>
-                    <if test= "pRoleKey != null">
-                        #{pRoleKey},
-                    </if>
-                    <if test= "pRoleDesc != null">
-                        #{pRoleDesc},
-                    </if>
-                    <if test= "enable != null">
-                        #{enable},
-                    </if>
-                    <if test= "sort != null">
-                        #{sort},
-                    </if>
+                    <if test= "id != null">#{id},</if>
+                    <if test= "roleKey != null">#{roleKey},</if>
+                    <if test= "roleDesc != null">#{roleDesc},</if>
+                    <if test= "pRoleKey != null">#{pRoleKey},</if>
+                    <if test= "pRoleDesc != null">#{pRoleDesc},</if>
+                    <if test= "enable != null">#{enable},</if>
+                    <if test= "sort != null">#{sort},</if>
         </trim>
     </insert>
     <update id="updateById" parameterType="com.lz.ht.model.Role" >
         UPDATE t_role
         <set>
-                    <if test= "id != null">
-                         id = #{id},
-                    </if>
-                    <if test= "roleKey != null">
-                         roleKey = #{roleKey},
-                    </if>
-                    <if test= "roleDesc != null">
-                         roleDesc = #{roleDesc},
-                    </if>
-                    <if test= "pRoleKey != null">
-                         pRoleKey = #{pRoleKey},
-                    </if>
-                    <if test= "pRoleDesc != null">
-                         pRoleDesc = #{pRoleDesc},
-                    </if>
-                    <if test= "enable != null">
-                         enable = #{enable},
-                    </if>
-                    <if test= "sort != null">
-                         sort = #{sort},
-                    </if>
+                    <if test= "id != null">id = #{id},</if>
+                    <if test= "roleKey != null">roleKey = #{roleKey},</if>
+                    <if test= "roleDesc != null">roleDesc = #{roleDesc},</if>
+                    <if test= "pRoleKey != null">pRoleKey = #{pRoleKey},</if>
+                    <if test= "pRoleDesc != null">pRoleDesc = #{pRoleDesc},</if>
+                    <if test= "enable != null">enable = #{enable},</if>
+                    <if test= "sort != null">sort = #{sort},</if>
         </set>
         WHERE id = #{id}
     </update>
@@ -91,102 +49,46 @@
 
     <select id="findList"  parameterType="com.lz.ht.model.Role" resultMap="baseResultMap">
         select * from  t_role t where 1=1
-                <if test= "id != null">
-                    and id = #{id}
-                </if>
-                <if test= "roleKey != null">
-                    and roleKey = #{roleKey}
-                </if>
-                <if test= "roleDesc != null">
-                    and roleDesc = #{roleDesc}
-                </if>
-                <if test= "pRoleKey != null">
-                    and pRoleKey = #{pRoleKey}
-                </if>
-                <if test= "pRoleDesc != null">
-                    and pRoleDesc = #{pRoleDesc}
-                </if>
-                <if test= "enable != null">
-                    and enable = #{enable}
-                </if>
-                <if test= "sort != null">
-                    and sort = #{sort}
-                </if>
+                <if test= "id != null"> and id = #{id}</if>
+                <if test= "roleKey != null"> and roleKey = #{roleKey}</if>
+                <if test= "roleDesc != null"> and roleDesc = #{roleDesc}</if>
+                <if test= "pRoleKey != null"> and pRoleKey = #{pRoleKey}</if>
+                <if test= "pRoleDesc != null"> and pRoleDesc = #{pRoleDesc}</if>
+                <if test= "enable != null"> and enable = #{enable}</if>
+                <if test= "sort != null"> and sort = #{sort}</if>
     </select>
 
     <select id="findCount" parameterType="com.lz.ht.model.Role"  resultType="java.lang.Long">
         select count(*)  from t_role where 1=1
-                    <if test= "id != null">
-                       and id = #{id}
-                    </if>
-                    <if test= "roleKey != null">
-                       and roleKey = #{roleKey}
-                    </if>
-                    <if test= "roleDesc != null">
-                       and roleDesc = #{roleDesc}
-                    </if>
-                    <if test= "pRoleKey != null">
-                       and pRoleKey = #{pRoleKey}
-                    </if>
-                    <if test= "pRoleDesc != null">
-                       and pRoleDesc = #{pRoleDesc}
-                    </if>
-                    <if test= "enable != null">
-                       and enable = #{enable}
-                    </if>
-                    <if test= "sort != null">
-                       and sort = #{sort}
-                    </if>
+                    <if test= "id != null"> and id = #{id}</if>
+                    <if test= "roleKey != null"> and roleKey = #{roleKey}</if>
+                    <if test= "roleDesc != null"> and roleDesc = #{roleDesc}</if>
+                    <if test= "pRoleKey != null"> and pRoleKey = #{pRoleKey}</if>
+                    <if test= "pRoleDesc != null"> and pRoleDesc = #{pRoleDesc}</if>
+                    <if test= "enable != null"> and enable = #{enable}</if>
+                    <if test= "sort != null"> and sort = #{sort}</if>
     </select>
 
     <select id="findCountByMap" parameterType="java.util.HashMap"   resultType="java.lang.Long" >
         select count(*) from t_role where 1=1
-                <if test= "id != null">
-                    and id = #{id}
-                </if>
-                <if test= "roleKey != null">
-                    and roleKey = #{roleKey}
-                </if>
-                <if test= "roleDesc != null">
-                    and roleDesc = #{roleDesc}
-                </if>
-                <if test= "pRoleKey != null">
-                    and pRoleKey = #{pRoleKey}
-                </if>
-                <if test= "pRoleDesc != null">
-                    and pRoleDesc = #{pRoleDesc}
-                </if>
-                <if test= "enable != null">
-                    and enable = #{enable}
-                </if>
-                <if test= "sort != null">
-                    and sort = #{sort}
-                </if>
+                <if test= "id != null">  and id = #{id} </if>
+                <if test= "roleKey != null">  and roleKey = #{roleKey} </if>
+                <if test= "roleDesc != null">  and roleDesc = #{roleDesc} </if>
+                <if test= "pRoleKey != null">  and pRoleKey = #{pRoleKey} </if>
+                <if test= "pRoleDesc != null">  and pRoleDesc = #{pRoleDesc} </if>
+                <if test= "enable != null">  and enable = #{enable} </if>
+                <if test= "sort != null">  and sort = #{sort} </if>
     </select>
 
     <select id="findListByMapLimit" parameterType="java.util.HashMap"   resultType="com.lz.ht.model.Role" >
         select * from t_role where 1=1
-                <if test= "id != null">
-                    and id = #{id}
-                </if>
-                <if test= "roleKey != null">
-                    and roleKey = #{roleKey}
-                </if>
-                <if test= "roleDesc != null">
-                    and roleDesc = #{roleDesc}
-                </if>
-                <if test= "pRoleKey != null">
-                    and pRoleKey = #{pRoleKey}
-                </if>
-                <if test= "pRoleDesc != null">
-                    and pRoleDesc = #{pRoleDesc}
-                </if>
-                <if test= "enable != null">
-                    and enable = #{enable}
-                </if>
-                <if test= "sort != null">
-                    and sort = #{sort}
-                </if>
+                <if test= "id != null">  and id = #{id}</if>
+                <if test= "roleKey != null">  and roleKey = #{roleKey}</if>
+                <if test= "roleDesc != null">  and roleDesc = #{roleDesc}</if>
+                <if test= "pRoleKey != null">  and pRoleKey = #{pRoleKey}</if>
+                <if test= "pRoleDesc != null">  and pRoleDesc = #{pRoleDesc}</if>
+                <if test= "enable != null">  and enable = #{enable}</if>
+                <if test= "sort != null">  and sort = #{sort}</if>
         order by id desc limit  #{msFirst},#{msLast}
     </select>
 

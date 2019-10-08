@@ -30,7 +30,7 @@ public class RoleResourcesServiceImpl  implements  RoleResourcesService {
     }
 
     @Override
-    public int deleteById(Integer RoleResourcesId) {
+    public int deleteById(Long RoleResourcesId) {
         return  roleResourcesMapper.deleteById(RoleResourcesId);
     }
 

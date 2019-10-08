@@ -31,23 +31,24 @@ public class RoleResourcesController extends BaseController{
 
     @RequestMapping(value = "/roleResources/list",method = {RequestMethod.GET})
     public String roleResources_list()throws Exception{
-        return "user/user_list";
+        return "roleResources/roleResources_list";
     }
 
 
 
     @RequestMapping(value = "/roleResources/list",method = {RequestMethod.POST})
     @ResponseBody
-    public PageModel list(RoleResources roleResources, PageModel page)throws Exception{
+    public PageModel list(RoleResources roleResources, PageModel<RoleResources> page)throws Exception{
+           page.init();
            List<RoleResources> list = roleResourcesServiceImpl.findPageList(page,roleResources);
            long count = roleResourcesServiceImpl.findCount(roleResources);
-           PageModel<RoleResources> pageModel = new PageModel<RoleResources>(page.getCurrentPageNum(),count,list);
-           return pageModel;
+           page.packData(count,list);
+           return page;
     }
 
     @RequestMapping(value = "/roleResources/add",method = {RequestMethod.GET})
     public String addInit(RoleResources roleResources,Model model){
-        return "roleResources/roleResources_list";
+        return "roleResources/roleResources_add";
     }
 
     @RequestMapping(value = "/roleResources/add",method = {RequestMethod.POST})
@@ -59,7 +60,7 @@ public class RoleResourcesController extends BaseController{
 
     @RequestMapping(value = "/roleResources/update",method = {RequestMethod.GET})
     public String updateInit(RoleResources roleResources,Model model){
-        return "roleResources/roleResources_list";
+        return "roleResources/roleResources_update";
     }
 
     @RequestMapping(value = "/roleResources/update",method = {RequestMethod.POST})
@@ -72,7 +73,7 @@ public class RoleResourcesController extends BaseController{
     @RequestMapping(value = "/roleResources/delete",method = {RequestMethod.POST})
     @ResponseBody
     public Result delete(RoleResources roleResources){
-        roleResourcesServiceImpl.deleteById(roleResources.getId().intValue());
+        roleResourcesServiceImpl.deleteById(roleResources.getId());
         return Result.genSuccessResult();
     }
 }

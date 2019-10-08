@@ -31,23 +31,24 @@ public class SysConfigController extends BaseController{
 
     @RequestMapping(value = "/sysConfig/list",method = {RequestMethod.GET})
     public String sysConfig_list()throws Exception{
-        return "user/user_list";
+        return "sysConfig/sysConfig_list";
     }
 
 
 
     @RequestMapping(value = "/sysConfig/list",method = {RequestMethod.POST})
     @ResponseBody
-    public PageModel list(SysConfig sysConfig, PageModel page)throws Exception{
+    public PageModel list(SysConfig sysConfig, PageModel<SysConfig> page)throws Exception{
+           page.init();
            List<SysConfig> list = sysConfigServiceImpl.findPageList(page,sysConfig);
            long count = sysConfigServiceImpl.findCount(sysConfig);
-           PageModel<SysConfig> pageModel = new PageModel<SysConfig>(page.getCurrentPageNum(),count,list);
-           return pageModel;
+           page.packData(count,list);
+           return page;
     }
 
     @RequestMapping(value = "/sysConfig/add",method = {RequestMethod.GET})
     public String addInit(SysConfig sysConfig,Model model){
-        return "sysConfig/sysConfig_list";
+        return "sysConfig/sysConfig_add";
     }
 
     @RequestMapping(value = "/sysConfig/add",method = {RequestMethod.POST})
@@ -59,7 +60,7 @@ public class SysConfigController extends BaseController{
 
     @RequestMapping(value = "/sysConfig/update",method = {RequestMethod.GET})
     public String updateInit(SysConfig sysConfig,Model model){
-        return "sysConfig/sysConfig_list";
+        return "sysConfig/sysConfig_update";
     }
 
     @RequestMapping(value = "/sysConfig/update",method = {RequestMethod.POST})
@@ -72,7 +73,7 @@ public class SysConfigController extends BaseController{
     @RequestMapping(value = "/sysConfig/delete",method = {RequestMethod.POST})
     @ResponseBody
     public Result delete(SysConfig sysConfig){
-        sysConfigServiceImpl.deleteById(sysConfig.getId().intValue());
+        sysConfigServiceImpl.deleteById(sysConfig.getId());
         return Result.genSuccessResult();
     }
 }

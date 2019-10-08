@@ -2,367 +2,166 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12371451-d0f4-48de-a1b6-c20372671517" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/DeptController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/ResourcesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/RoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/RoleResourcesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/SysConfigController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/UserRoleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/DeptMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/ResourcesMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/RoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/RoleResourcesMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/SysConfigMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/UserRoleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dto/DeptDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dto/ResourcesDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dto/RoleDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dto/RoleResourcesDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dto/SysConfigDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dto/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dto/UserRoleDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/model/Dept.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/model/Resources.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/model/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/model/RoleResources.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/model/SysConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/model/UserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/DeptService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/ResourcesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/RoleResourcesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/RoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/SysConfigService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/UserRoleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/DeptServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/ResourcesServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/RoleResourcesServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/RoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/SysConfigServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/UserRoleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/dept/dept_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/dept/dept_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/dept/dept_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/resources/resources_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/resources/resources_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/resources/resources_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/role/role_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/role/role_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/role/role_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/roleResources/roleResources_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/roleResources/roleResources_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/roleResources/roleResources_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/sysConfig/sysConfig_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/sysConfig/sysConfig_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/sysConfig/sysConfig_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/user/user_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/user/user_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/user/user_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/userRole/userRole_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/userRole/userRole_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/userRole/userRole_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/DeptMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/ResourcesMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/RoleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/RoleResourcesMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/SysConfigMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/UserRoleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/application-local.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/application-prod.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/GoodsApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/base/BaseController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/base/ExceptionController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/base/dateconverter/DateConverter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/base/exadvice/GlobalExceptionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/base/exadvice/SysException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/base/result/Result.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/base/result/ResultUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/configuration/DruidConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/configuration/JwtConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/configuration/ShiroConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/configuration/WebMvcConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/constant/SysConstant.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/ApiController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/DeptController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/ResourcesController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/RoleController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/RoleResourcesController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/ShiroAnnoTestController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/SysConfigController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/SystemController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/UserRoleController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/DeptMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/ResourcesMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/RoleMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/RoleResourcesMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/SysConfigMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/UserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/UserRoleMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dto/DeptDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dto/ResourcesDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dto/RoleDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dto/RoleResourcesDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dto/SysConfigDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dto/UserDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dto/UserRoleDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/filter/MyFilter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/model/AESDecripytData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/model/AESEncripytData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/model/Dept.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/model/Resources.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/model/Role.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/model/RoleResources.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/model/SysConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/model/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/model/UserRole.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/page/PageModel.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/quartz/ApplicationStartQuartzJobListener.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/quartz/QuartzApiController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/quartz/QuartzScheduler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/quartz/SpringContextHolder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/quartz/UploadPictures2ProvinceJob.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/realm/CustomRealm.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/result/Result.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/result/ResultMsg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/DeptService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/ResourcesService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/RoleResourcesService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/RoleService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/SysConfigService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/UserRoleService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/DeptServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/ResourcesServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/RoleResourcesServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/RoleServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/SysConfigServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/UserRoleServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/util/AESivUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/util/JsonUtil$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/util/JsonUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/util/JwtUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/util/KeysUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/util/MD5Util.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/util/MySimpleByteSource$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/util/MySimpleByteSource$BytesHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/util/MySimpleByteSource.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/util/ProvideAESivUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/util/ProvideRSAUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/util/RSAUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/util/ToolKit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/util/UtilHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/logback-spring.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/css/layui.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/css/modules/code.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/css/modules/layer/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/css/modules/layer/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/font/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/font/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/font/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/font/iconfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/13.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/14.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/15.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/17.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/18.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/19.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/20.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/21.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/22.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/23.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/24.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/25.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/26.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/27.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/28.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/29.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/30.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/31.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/32.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/33.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/34.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/35.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/36.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/37.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/38.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/39.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/40.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/41.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/42.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/43.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/44.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/45.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/46.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/47.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/48.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/49.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/50.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/51.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/52.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/53.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/54.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/55.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/56.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/57.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/58.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/59.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/60.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/61.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/62.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/63.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/64.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/65.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/66.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/67.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/68.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/69.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/70.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/71.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/images/face/9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/colorpicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/flow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/laydate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/layedit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/laypage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/laytpl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/rate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/transfer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/lay/modules/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/layui.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/layui/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/alllayui/orderfile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/da" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/system/images/404.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/system/index/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/static/system/login/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/codeplayer/play.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/dept/dept_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/dept/dept_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/dept/dept_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/error/error.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/login/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/main/mainIndex.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/resources/resources_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/resources/resources_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/resources/resources_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/role/role_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/role/role_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/role/role_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/roleResources/roleResources_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/roleResources/roleResources_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/roleResources/roleResources_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/sysConfig/sysConfig_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/sysConfig/sysConfig_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/sysConfig/sysConfig_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/user/user_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/user/user_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/user/user_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/userRole/userRole_add.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/userRole/userRole_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/userRole/userRole_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/DeptMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/ResourcesMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/RoleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/RoleResourcesMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/SysConfigMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/UserRoleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/htadmin-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htadmin/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htapi/target/htapi-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htapi/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htapi/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htapi/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/com/lz/ht/code/CodePlayer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/com/lz/ht/code/ColumnClass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/com/lz/ht/code/FreeMarkerTemplateUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/com/lz/ht/code/JdbcUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/generatorConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/mysql2.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/Controller.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/Dto.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/Mapper.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/MapperXML.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/Model.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/PageAdd.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/PageList.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/PageUpdate.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/Service.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/ServiceImpl.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/htcodeplayer-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcodeplayer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcore/target/htcore-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcore/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcore/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/htcore/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/debug/htadmin_log-debug-2019-10-01.0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/debug/htadmin_log-debug-2019-10-05.0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/debug/htadmin_log-debug-2019-10-05.1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/debug/htadmin_log-debug-2019-10-06.0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/debug/htadmin_log-debug-2019-10-06.1.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/debug/htadmin_log-debug-2019-10-06.2.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/error/htadmin_log-error-2019-10-01.0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/error/htadmin_log-error-2019-10-05.0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/htadmin/htSystem-htadmin.2019-09-29.log.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/htadmin/htSystem-htadmin.2019-09-30.log.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/htadmin/htadmin.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/htadmin_log_debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/htadmin_log_info.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/htadmin_log_warn.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/info/htadmin_log-info-2019-10-01.0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/info/htadmin_log-info-2019-10-05.0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/log_error.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/warn/htadmin_log-warn-2019-10-01.0.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/warn/htadmin_log-warn-2019-10-05.0.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/htadmin/src/main/resources/static/system/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/DeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/DeptController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/ResourcesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/ResourcesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/RoleResourcesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/RoleResourcesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/SysConfigController.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/SysConfigController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/UserRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/UserRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/DeptMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/DeptMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/ResourcesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/ResourcesMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/RoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/RoleResourcesMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/RoleResourcesMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/SysConfigMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/SysConfigMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/UserRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/UserRoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/page/PageModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/page/PageModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/result/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/DeptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/DeptService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/ResourcesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/ResourcesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/RoleResourcesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/RoleResourcesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/SysConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/SysConfigService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/UserRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/UserRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/DeptServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/DeptServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/ResourcesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/ResourcesServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/RoleResourcesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/RoleResourcesServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/RoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/SysConfigServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/SysConfigServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/UserRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/UserRoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/dept/dept_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/dept/dept_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/dept/dept_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/dept/dept_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/dept/dept_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/dept/dept_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/resources/resources_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/resources/resources_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/resources/resources_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/resources/resources_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/resources/resources_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/resources/resources_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/role/role_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/role/role_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/role/role_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/role/role_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/role/role_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/role/role_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/roleResources/roleResources_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/roleResources/roleResources_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/roleResources/roleResources_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/roleResources/roleResources_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/roleResources/roleResources_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/roleResources/roleResources_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/sysConfig/sysConfig_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/sysConfig/sysConfig_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/sysConfig/sysConfig_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/sysConfig/sysConfig_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/sysConfig/sysConfig_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/sysConfig/sysConfig_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/user/user_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/user/user_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/user/user_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/user/user_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/user/user_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/user/user_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/userRole/userRole_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/userRole/userRole_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/userRole/userRole_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/userRole/userRole_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/templates/userRole/userRole_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/templates/userRole/userRole_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/DeptMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/DeptMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/ResourcesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/ResourcesMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/RoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/RoleResourcesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/RoleResourcesMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/SysConfigMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/SysConfigMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/UserRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/UserRoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/DeptController.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/DeptController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/ResourcesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/ResourcesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/RoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/RoleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/RoleResourcesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/RoleResourcesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/SysConfigController.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/SysConfigController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/UserRoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/controller/UserRoleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/DeptMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/DeptMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/ResourcesMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/ResourcesMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/RoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/RoleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/RoleResourcesMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/RoleResourcesMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/SysConfigMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/SysConfigMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/UserRoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/dao/UserRoleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/result/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/result/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/DeptService.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/DeptService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/ResourcesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/ResourcesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/RoleResourcesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/RoleResourcesService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/RoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/RoleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/SysConfigService.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/SysConfigService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/UserRoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/UserRoleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/DeptServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/DeptServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/ResourcesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/ResourcesServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/RoleResourcesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/RoleResourcesServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/RoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/RoleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/SysConfigServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/SysConfigServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/UserRoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/UserRoleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/com/lz/ht/service/serviceImpl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/dept/dept_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/dept/dept_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/dept/dept_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/dept/dept_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/dept/dept_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/dept/dept_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/resources/resources_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/resources/resources_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/resources/resources_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/resources/resources_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/resources/resources_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/resources/resources_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/role/role_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/role/role_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/role/role_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/role/role_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/role/role_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/role/role_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/roleResources/roleResources_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/roleResources/roleResources_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/roleResources/roleResources_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/roleResources/roleResources_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/roleResources/roleResources_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/roleResources/roleResources_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/sysConfig/sysConfig_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/sysConfig/sysConfig_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/sysConfig/sysConfig_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/sysConfig/sysConfig_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/sysConfig/sysConfig_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/sysConfig/sysConfig_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/user/user_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/user/user_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/user/user_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/user/user_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/user/user_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/user/user_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/userRole/userRole_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/userRole/userRole_add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/userRole/userRole_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/userRole/userRole_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/templates/userRole/userRole_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/templates/userRole/userRole_update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/DeptMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/DeptMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/ResourcesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/ResourcesMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/RoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/RoleResourcesMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/RoleResourcesMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/SysConfigMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/SysConfigMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/UserRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/htadmin/target/classes/xml/mapper/UserRoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/htadmin-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htadmin/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htapi/target/htapi-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htapi/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htapi/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htapi/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Controller.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Controller.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Mapper.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Mapper.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/MapperXML.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/MapperXML.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/PageAdd.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/PageAdd.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/PageList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/PageList.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/PageUpdate.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/PageUpdate.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Service.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Service.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/ServiceImpl.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/ServiceImpl.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/Controller.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/Controller.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/Mapper.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/Mapper.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/MapperXML.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/MapperXML.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/PageAdd.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/PageAdd.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/PageList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/PageList.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/PageUpdate.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/PageUpdate.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/Service.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/Service.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/ServiceImpl.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/htcodeplayer/target/classes/templates/ServiceImpl.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/target/htcodeplayer-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcodeplayer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcore/target/htcore-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcore/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcore/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/htcore/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/htadmin_log_debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/htadmin_log_debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/htadmin_log_info.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/htadmin_log_info.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/htadmin_log_warn.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/htadmin_log_warn.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log_error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log_error.log" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -396,19 +195,118 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/base/BaseController.java">
+        <entry file="file://$PROJECT_DIR$/htadmin/src/main/resources/templates/user/user_add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="51" column="59" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
+            <state relative-caret-position="399">
+              <caret line="99" column="35" selection-start-line="99" selection-start-column="35" selection-end-line="99" selection-end-column="35" />
+              <folding>
+                <element signature="n#style#0;n#fieldset#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htadmin/src/main/resources/templates/user/user_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="92" column="46" lean-forward="true" selection-start-line="90" selection-start-column="15" selection-end-line="92" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/DeptController.java">
+        <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/PageList.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+            <state relative-caret-position="187">
+              <caret line="84" column="46" lean-forward="true" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/PageAdd.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/java/com/lz/ht/code/CodePlayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="770">
+              <caret line="176" column="83" selection-start-line="176" selection-start-column="61" selection-end-line="176" selection-end-column="83" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/result/Result.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="7" column="26" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="26" />
+              <folding>
+                <element signature="e#447#448#0" expanded="true" />
+                <element signature="e#477#478#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Controller.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/page/PageModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="721">
+              <caret line="95" column="63" selection-start-line="95" selection-start-column="63" selection-end-line="95" selection-end-column="63" />
+              <folding>
+                <element signature="e#649#650#0" expanded="true" />
+                <element signature="e#685#686#0" expanded="true" />
+                <element signature="e#729#730#0" expanded="true" />
+                <element signature="e#767#768#0" expanded="true" />
+                <element signature="e#996#997#0" expanded="true" />
+                <element signature="e#1025#1026#0" expanded="true" />
+                <element signature="e#2764#2765#0" expanded="true" />
+                <element signature="e#2830#2831#0" expanded="true" />
+                <element signature="e#2903#2904#0" expanded="true" />
+                <element signature="e#3005#3006#0" expanded="true" />
+                <element signature="e#3069#3070#0" expanded="true" />
+                <element signature="e#3155#3156#0" expanded="true" />
+                <element signature="e#3226#3227#0" expanded="true" />
+                <element signature="e#3323#3324#0" expanded="true" />
+                <element signature="e#3423#3424#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -432,6 +330,9 @@
       <find>fast</find>
       <find>devtools</find>
       <find>/nmyslog/nmys</find>
+      <find>jackson-core</find>
+      <find>currentPageNum</find>
+      <find>searchReload</find>
     </findStrings>
     <replaceStrings>
       <replace>某</replace>
@@ -443,13 +344,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/htadmin/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/DeptMapper.xml" />
-        <option value="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/MapperXML.ftl" />
-        <option value="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Service.ftl" />
-        <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/UserRoleMapper.java" />
-        <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/UserMapper.java" />
         <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/base/BaseController.java" />
         <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/ResourcesController.java" />
         <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/RoleController.java" />
@@ -469,11 +363,9 @@
         <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/base/result/ResultUtil.java" />
         <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/base/result/Result.java" />
         <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/UserRoleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/ServiceImpl.ftl" />
         <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/configuration/JwtConfig.java" />
         <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/configuration/WebMvcConfig.java" />
         <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/UserService.java" />
-        <option value="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Mapper.ftl" />
         <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/model/Dept.java" />
         <option value="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Model.ftl" />
         <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/GoodsApplication.java" />
@@ -489,9 +381,18 @@
         <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/SystemController.java" />
         <option value="$PROJECT_DIR$/htadmin/src/main/resources/templates/main/mainIndex.html" />
         <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/configuration/ShiroConfig.java" />
-        <option value="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Controller.ftl" />
         <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/ShiroAnnoTestController.java" />
+        <option value="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Service.ftl" />
+        <option value="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/ServiceImpl.ftl" />
+        <option value="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Mapper.ftl" />
+        <option value="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/PageUpdate.ftl" />
+        <option value="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/MapperXML.ftl" />
+        <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/result/Result.java" />
         <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/page/PageModel.java" />
+        <option value="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Controller.ftl" />
+        <option value="$PROJECT_DIR$/htadmin/src/main/resources/templates/user/user_add.html" />
+        <option value="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/PageAdd.ftl" />
         <option value="$PROJECT_DIR$/htadmin/src/main/resources/templates/user/user_list.html" />
         <option value="$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/PageList.ftl" />
       </list>
@@ -571,10 +472,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="192" />
-    <option name="y" value="95" />
-    <option name="width" value="1924" />
-    <option name="height" value="1103" />
+    <option name="x" value="596" />
+    <option name="y" value="107" />
+    <option name="width" value="1925" />
+    <option name="height" value="1104" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -582,6 +483,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -779,7 +681,28 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="htadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="htadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="htSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -789,7 +712,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="htSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -800,6 +722,15 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="htadmin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="htSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -862,7 +793,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -876,7 +806,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/htadmin/src/main/resources/static/system/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/htadmin/src/main/resources/static/system/js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -895,11 +825,11 @@
       <recent name="E:\kj\htSystem\htadmin\src\main\resources\static\alllayui\" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\kj\htSystem\htadmin\src\main\resources\static\system\js" />
       <recent name="E:\kj\htSystem\htadmin\src\main\resources\static\system\images" />
       <recent name="E:\kj\htSystem\htadmin\src\main\resources\templates\main" />
       <recent name="E:\kj\htSystem\htadmin\src\main\resources" />
       <recent name="E:\kj\htSystem\htadmin\src\main\resources\templates\login" />
-      <recent name="E:\kj\htSystem\htadmin\src\main\resources\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -994,7 +924,8 @@
       <workItem from="1569743197989" duration="18885000" />
       <workItem from="1569932157627" duration="5738000" />
       <workItem from="1570269324056" duration="10656000" />
-      <workItem from="1570326153464" duration="20274000" />
+      <workItem from="1570326153464" duration="29576000" />
+      <workItem from="1570442647602" duration="13798000" />
     </task>
     <task id="LOCAL-00001" summary="springboot+maven">
       <created>1569640440297</created>
@@ -1038,11 +969,18 @@
       <option name="project" value="LOCAL" />
       <updated>1570355879596</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="修改了模板">
+      <created>1570356041110</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1570356041110</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139838000" />
+    <option name="totallyTimeSpent" value="162938000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -1055,8 +993,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2546917" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20576407" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1066,23 +1005,23 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.57478005" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.6334311" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.1085044" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.17595308" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.12316716" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.329429" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32844576" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32844576" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.872434" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49932975" weight="0.6568915" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49932975" weight="0.04398827" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32991204" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" visible="true" weight="0.16129032" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.045454547" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.09584451" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.028820375" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.04691689" />
@@ -1114,21 +1053,9 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/DeptController.java</url>
-          <line>41</line>
+          <line>33</line>
           <properties />
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/page/PageModel.java</url>
-          <line>115</line>
-          <properties />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/page/PageModel.java</url>
-          <line>90</line>
-          <properties />
-          <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/SystemController.java</url>
@@ -1136,35 +1063,47 @@
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/filter/MyFilter.java</url>
           <line>18</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/SystemController.java</url>
           <line>104</line>
           <properties />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/realm/CustomRealm.java</url>
-          <line>46</line>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/UserServiceImpl.java</url>
+          <line>33</line>
           <properties />
-          <option name="timeStamp" value="23" />
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/realm/CustomRealm.java</url>
-          <line>56</line>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/UserServiceImpl.java</url>
+          <line>23</line>
           <properties />
-          <option name="timeStamp" value="24" />
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/ResourcesServiceImpl.java</url>
-          <line>38</line>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/UserController.java</url>
+          <line>57</line>
           <properties />
-          <option name="timeStamp" value="28" />
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/UserController.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/page/PageModel.java</url>
+          <line>104</line>
+          <properties />
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1173,259 +1112,6 @@
     <SUITE FILE_PATH="coverage/htSystem$GoodsApplication.ic" NAME="GoodsApplication Coverage Results" MODIFIED="1569932636320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-96">
-          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dto/DeptDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/quartz/ApplicationStartQuartzJobListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Model.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/GoodsApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Mapper.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/model/Dept.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/resources/application-local.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/base/exadvice/SysException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/resources/static/system/images/404.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/resources/templates/error/error.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/base/result/ResultUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/base/exadvice/GlobalExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="38" lean-forward="true" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/base/SysErrorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/result/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/base/result/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/base/ExceptionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/SysConfigService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/util/MySimpleByteSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-589">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/filter/MyFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/configuration/DruidConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1482">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/configuration/WebMvcConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/configuration/JwtConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/constant/SysConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/SysConfigController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/repos/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authc/AbstractAuthenticator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/util/MD5Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/repos/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/subject/SimplePrincipalCollection.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/repos/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authc/SimpleAuthenticationInfo.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2014">
-          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/repos/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/authz/AuthorizationInfo.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://E:/repos/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/realm/AuthorizingRealm.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
@@ -1444,13 +1130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://E:/repos/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
         </state>
       </provider>
     </entry>
@@ -1481,9 +1160,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Dto.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/ShiroAnnoTestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-76">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/DeptController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="71" column="44" selection-start-line="71" selection-start-column="44" selection-end-line="71" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/base/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1121">
+          <caret line="98" column="43" lean-forward="true" selection-start-line="98" selection-start-column="43" selection-end-line="98" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htadmin/src/main/resources/static/system/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/realm/CustomRealm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
+        <state relative-caret-position="70">
           <caret line="56" selection-start-line="56" selection-end-line="56" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1501,66 +1207,307 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Dto.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Service.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/ServiceImpl.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Model.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/dao/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="17" selection-start-line="17" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Mapper.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/util/MD5Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/PageUpdate.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/configuration/DruidConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="145" column="53" selection-start-line="145" selection-start-column="53" selection-end-line="145" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/MapperXML.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-959">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htadmin/src/main/resources/xml/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="12" column="61" lean-forward="true" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/repos/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22.jar!/org/apache/tomcat/util/net/NioEndpoint.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="390" selection-start-line="390" selection-end-line="390" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htadmin/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1976">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/repos/org/springframework/spring-webmvc/5.1.9.RELEASE/spring-webmvc-5.1.9.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="493" selection-start-line="493" selection-end-line="493" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/repos/org/springframework/spring-webmvc/5.1.9.RELEASE/spring-webmvc-5.1.9.RELEASE.jar!/org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/repos/org/springframework/spring-webmvc/5.1.9.RELEASE/spring-webmvc-5.1.9.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="436" selection-start-line="436" selection-end-line="436" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/repos/org/springframework/spring-webmvc/5.1.9.RELEASE/spring-webmvc-5.1.9.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="438" selection-start-line="438" selection-end-line="438" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/repos/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.22/tomcat-embed-websocket-9.0.22.jar!/org/apache/tomcat/websocket/server/WsFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/repos/org/apache/tomcat/embed/tomcat-embed-core/9.0.22/tomcat-embed-core-9.0.22.jar!/org/apache/catalina/core/ApplicationFilterChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/repos/org/apache/shiro/shiro-web/1.4.0/shiro-web-1.4.0.jar!/org/apache/shiro/web/servlet/AdviceFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/repos/org/apache/shiro/shiro-web/1.4.0/shiro-web-1.4.0.jar!/org/apache/shiro/web/servlet/ProxiedFilterChain.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/repos/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/subject/support/SubjectCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/repos/org/apache/shiro/shiro-core/1.4.0/shiro-core-1.4.0.jar!/org/apache/shiro/subject/support/DelegatingSubject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="294" selection-start-line="294" selection-end-line="294" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/repos/org/apache/shiro/shiro-web/1.4.0/shiro-web-1.4.0.jar!/org/apache/shiro/web/servlet/AbstractShiroFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="181" selection-start-line="181" selection-end-line="181" />
+          <folding>
+            <element signature="e#6061#6376#0" expanded="true" />
+            <element signature="e#6375#6376#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/repos/org/apache/shiro/shiro-web/1.4.0/shiro-web-1.4.0.jar!/org/apache/shiro/web/servlet/OncePerRequestFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/serviceImpl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="62" column="73" selection-start-line="62" selection-start-column="63" selection-end-line="62" selection-end-column="73" />
+          <folding>
+            <element signature="e#700#701#0" expanded="true" />
+            <element signature="e#738#739#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/repos/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/repos/org/springframework/spring-webmvc/5.1.9.RELEASE/spring-webmvc-5.1.9.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/page/PageModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="95" column="63" selection-start-line="95" selection-start-column="63" selection-end-line="95" selection-end-column="63" />
+          <folding>
+            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#767#768#0" expanded="true" />
+            <element signature="e#996#997#0" expanded="true" />
+            <element signature="e#1025#1026#0" expanded="true" />
+            <element signature="e#2764#2765#0" expanded="true" />
+            <element signature="e#2830#2831#0" expanded="true" />
+            <element signature="e#2903#2904#0" expanded="true" />
+            <element signature="e#3005#3006#0" expanded="true" />
+            <element signature="e#3069#3070#0" expanded="true" />
+            <element signature="e#3155#3156#0" expanded="true" />
+            <element signature="e#3226#3227#0" expanded="true" />
+            <element signature="e#3323#3324#0" expanded="true" />
+            <element signature="e#3423#3424#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/Controller.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="31" column="41" selection-start-line="31" selection-start-column="41" selection-end-line="31" selection-end-column="41" />
+        <state relative-caret-position="81">
+          <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/PageList.ftl">
+    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/result/Result.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="77" column="37" lean-forward="true" selection-start-line="77" selection-start-column="37" selection-end-line="77" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/ShiroAnnoTestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        <state relative-caret-position="64">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="26" />
+          <folding>
+            <element signature="e#447#448#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="190">
+          <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1468#1474#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/java/com/lz/ht/code/CodePlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="176" column="83" selection-start-line="176" selection-start-column="61" selection-end-line="176" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/PageAdd.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htadmin/src/main/resources/templates/user/user_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="99" column="35" selection-start-line="99" selection-start-column="35" selection-end-line="99" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#fieldset#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/htadmin/src/main/resources/templates/user/user_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="54" column="42" selection-start-line="54" selection-start-column="42" selection-end-line="54" selection-end-column="42" />
+        <state relative-caret-position="366">
+          <caret line="92" column="46" lean-forward="true" selection-start-line="90" selection-start-column="15" selection-end-line="92" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/page/PageModel.java">
+    <entry file="file://$PROJECT_DIR$/htcodeplayer/src/main/resources/templates/PageList.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="58" column="22" lean-forward="true" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/base/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="51" column="59" selection-start-line="51" selection-start-column="59" selection-end-line="51" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htadmin/src/main/java/com/lz/ht/controller/DeptController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+        <state relative-caret-position="187">
+          <caret line="84" column="46" lean-forward="true" selection-start-line="84" selection-start-column="46" selection-end-line="84" selection-end-column="46" />
         </state>
       </provider>
     </entry>

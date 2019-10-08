@@ -14,7 +14,7 @@ public interface RoleResourcesMapper {
 
     void updateById(RoleResources record);
 
-    int deleteById(Integer RoleResourcesId);
+    int deleteById(Long RoleResourcesId);
 
     List<RoleResources> findAll();
 

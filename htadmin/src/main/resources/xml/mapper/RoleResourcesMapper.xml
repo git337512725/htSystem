@@ -5,41 +5,23 @@
     <resultMap id="baseResultMap" type="com.lz.ht.model.RoleResources"></resultMap>
 
     <insert id="add" parameterType="com.lz.ht.model.RoleResources" >
-        insert into <trim prefix="(" suffix=")" suffixOverrides= ",">
-                    <if test= "id != null">
-                        id,
-                    </if>
-                    <if test= "roleKey != null">
-                        roleKey,
-                    </if>
-                    <if test= "resKey != null">
-                        resKey,
-                    </if>
+        insert into t_role_resources <trim prefix="(" suffix=")" suffixOverrides= ",">
+                    <if test= "id != null">id,</if>
+                    <if test= "roleKey != null">roleKey,</if>
+                    <if test= "resKey != null">resKey,</if>
         </trim>
         values <trim prefix="(" suffix=")" suffixOverrides= ",">
-                    <if test= "id != null">
-                        #{id},
-                    </if>
-                    <if test= "roleKey != null">
-                        #{roleKey},
-                    </if>
-                    <if test= "resKey != null">
-                        #{resKey},
-                    </if>
+                    <if test= "id != null">#{id},</if>
+                    <if test= "roleKey != null">#{roleKey},</if>
+                    <if test= "resKey != null">#{resKey},</if>
         </trim>
     </insert>
     <update id="updateById" parameterType="com.lz.ht.model.RoleResources" >
         UPDATE t_role_resources
         <set>
-                    <if test= "id != null">
-                         id = #{id},
-                    </if>
-                    <if test= "roleKey != null">
-                         roleKey = #{roleKey},
-                    </if>
-                    <if test= "resKey != null">
-                         resKey = #{resKey},
-                    </if>
+                    <if test= "id != null">id = #{id},</if>
+                    <if test= "roleKey != null">roleKey = #{roleKey},</if>
+                    <if test= "resKey != null">resKey = #{resKey},</if>
         </set>
         WHERE id = #{id}
     </update>
@@ -55,54 +37,30 @@
 
     <select id="findList"  parameterType="com.lz.ht.model.RoleResources" resultMap="baseResultMap">
         select * from  t_role_resources t where 1=1
-                <if test= "id != null">
-                    and id = #{id}
-                </if>
-                <if test= "roleKey != null">
-                    and roleKey = #{roleKey}
-                </if>
-                <if test= "resKey != null">
-                    and resKey = #{resKey}
-                </if>
+                <if test= "id != null"> and id = #{id}</if>
+                <if test= "roleKey != null"> and roleKey = #{roleKey}</if>
+                <if test= "resKey != null"> and resKey = #{resKey}</if>
     </select>
 
     <select id="findCount" parameterType="com.lz.ht.model.RoleResources"  resultType="java.lang.Long">
         select count(*)  from t_role_resources where 1=1
-                    <if test= "id != null">
-                       and id = #{id}
-                    </if>
-                    <if test= "roleKey != null">
-                       and roleKey = #{roleKey}
-                    </if>
-                    <if test= "resKey != null">
-                       and resKey = #{resKey}
-                    </if>
+                    <if test= "id != null"> and id = #{id}</if>
+                    <if test= "roleKey != null"> and roleKey = #{roleKey}</if>
+                    <if test= "resKey != null"> and resKey = #{resKey}</if>
     </select>
 
     <select id="findCountByMap" parameterType="java.util.HashMap"   resultType="java.lang.Long" >
         select count(*) from t_role_resources where 1=1
-                <if test= "id != null">
-                    and id = #{id}
-                </if>
-                <if test= "roleKey != null">
-                    and roleKey = #{roleKey}
-                </if>
-                <if test= "resKey != null">
-                    and resKey = #{resKey}
-                </if>
+                <if test= "id != null">  and id = #{id} </if>
+                <if test= "roleKey != null">  and roleKey = #{roleKey} </if>
+                <if test= "resKey != null">  and resKey = #{resKey} </if>
     </select>
 
     <select id="findListByMapLimit" parameterType="java.util.HashMap"   resultType="com.lz.ht.model.RoleResources" >
         select * from t_role_resources where 1=1
-                <if test= "id != null">
-                    and id = #{id}
-                </if>
-                <if test= "roleKey != null">
-                    and roleKey = #{roleKey}
-                </if>
-                <if test= "resKey != null">
-                    and resKey = #{resKey}
-                </if>
+                <if test= "id != null">  and id = #{id}</if>
+                <if test= "roleKey != null">  and roleKey = #{roleKey}</if>
+                <if test= "resKey != null">  and resKey = #{resKey}</if>
         order by id desc limit  #{msFirst},#{msLast}
     </select>
 

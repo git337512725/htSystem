@@ -30,7 +30,7 @@ public class DeptServiceImpl  implements  DeptService {
     }
 
     @Override
-    public int deleteById(Integer DeptId) {
+    public int deleteById(Long DeptId) {
         return  deptMapper.deleteById(DeptId);
     }
 

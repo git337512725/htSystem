@@ -11,7 +11,7 @@ public interface RoleResourcesService {
 
     void updateById(RoleResources record);
 
-    int deleteById(Integer RoleResourcesId);
+    int deleteById(Long RoleResourcesId);
 
     List<RoleResources> findAll();
 

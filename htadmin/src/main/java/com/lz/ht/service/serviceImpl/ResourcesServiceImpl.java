@@ -30,7 +30,7 @@ public class ResourcesServiceImpl  implements  ResourcesService {
     }
 
     @Override
-    public int deleteById(Integer ResourcesId) {
+    public int deleteById(Long ResourcesId) {
         return  resourcesMapper.deleteById(ResourcesId);
     }
 

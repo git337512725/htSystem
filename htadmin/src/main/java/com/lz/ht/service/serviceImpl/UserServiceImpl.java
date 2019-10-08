@@ -30,7 +30,7 @@ public class UserServiceImpl  implements  UserService {
     }
 
     @Override
-    public int deleteById(Integer UserId) {
+    public int deleteById(Long UserId) {
         return  userMapper.deleteById(UserId);
     }
 

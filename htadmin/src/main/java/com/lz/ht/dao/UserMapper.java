@@ -14,7 +14,7 @@ public interface UserMapper {
 
     void updateById(User record);
 
-    int deleteById(Integer UserId);
+    int deleteById(Long UserId);
 
     List<User> findAll();
 

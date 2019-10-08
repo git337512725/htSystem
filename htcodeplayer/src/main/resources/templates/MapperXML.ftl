@@ -5,21 +5,17 @@
     <resultMap id="baseResultMap" type="${package_name}.model.${model_simple_name}"></resultMap>
 
     <insert id="add" parameterType="${package_name}.model.${model_simple_name}" >
-        insert into <trim prefix="(" suffix=")" suffixOverrides= ",">
+        insert into ${table_name} <trim prefix="(" suffix=")" suffixOverrides= ",">
             <#if model_columnList?exists>
                 <#list model_columnList as model>
-                    <if test= "${model.changeColumnName?uncap_first} != null">
-                        ${model.columnName},
-                    </if>
+                    <if test= "${model.changeColumnName?uncap_first} != null">${model.columnName},</if>
                 </#list>
             </#if>
         </trim>
         values <trim prefix="(" suffix=")" suffixOverrides= ",">
             <#if model_columnList?exists>
                 <#list model_columnList as model>
-                    <if test= "${model.changeColumnName?uncap_first} != null">
-                        ${r"#{"}${model.changeColumnName?uncap_first}${r"}"},
-                    </if>
+                    <if test= "${model.changeColumnName?uncap_first} != null">${r"#{"}${model.changeColumnName?uncap_first}${r"}"},</if>
                 </#list>
             </#if>
         </trim>
@@ -29,9 +25,7 @@
         <set>
             <#if model_columnList?exists>
                 <#list model_columnList as model>
-                    <if test= "${model.changeColumnName?uncap_first} != null">
-                         ${model.columnName} = ${r"#{"}${model.changeColumnName?uncap_first}${r"}"},
-                    </if>
+                    <if test= "${model.changeColumnName?uncap_first} != null">${model.columnName} = ${r"#{"}${model.changeColumnName?uncap_first}${r"}"},</if>
                 </#list>
             </#if>
         </set>
@@ -51,9 +45,7 @@
         select * from  ${table_name} t where 1=1
         <#if model_columnList?exists>
             <#list model_columnList as model>
-                <if test= "${model.changeColumnName?uncap_first} != null">
-                    and ${model.columnName} = ${r"#{"}${model.changeColumnName?uncap_first}${r"}"}
-                </if>
+                <if test= "${model.changeColumnName?uncap_first} != null"> and ${model.columnName} = ${r"#{"}${model.changeColumnName?uncap_first}${r"}"}</if>
             </#list>
         </#if>
     </select>
@@ -62,9 +54,7 @@
         select count(*)  from ${table_name} where 1=1
             <#if model_columnList?exists>
                 <#list model_columnList as model>
-                    <if test= "${model.changeColumnName?uncap_first} != null">
-                       and ${model.columnName} = ${r"#{"}${model.changeColumnName?uncap_first}${r"}"}
-                    </if>
+                    <if test= "${model.changeColumnName?uncap_first} != null"> and ${model.columnName} = ${r"#{"}${model.changeColumnName?uncap_first}${r"}"}</if>
                 </#list>
             </#if>
     </select>
@@ -73,9 +63,7 @@
         select count(*) from ${table_name} where 1=1
         <#if model_columnList?exists>
             <#list model_columnList as model>
-                <if test= "${model.changeColumnName?uncap_first} != null">
-                    and ${model.columnName} = ${r"#{"}${model.changeColumnName?uncap_first}${r"}"}
-                </if>
+                <if test= "${model.changeColumnName?uncap_first} != null">  and ${model.columnName} = ${r"#{"}${model.changeColumnName?uncap_first}${r"}"} </if>
             </#list>
         </#if>
     </select>
@@ -84,9 +72,7 @@
         select * from ${table_name} where 1=1
         <#if model_columnList?exists>
             <#list model_columnList as model>
-                <if test= "${model.changeColumnName?uncap_first} != null">
-                    and ${model.columnName} = ${r"#{"}${model.changeColumnName?uncap_first}${r"}"}
-                </if>
+                <if test= "${model.changeColumnName?uncap_first} != null">  and ${model.columnName} = ${r"#{"}${model.changeColumnName?uncap_first}${r"}"}</if>
             </#list>
         </#if>
         order by id desc limit  ${r"#{"}${'msFirst'}${r"}"},${r"#{"}${'msLast'}${r"}"}

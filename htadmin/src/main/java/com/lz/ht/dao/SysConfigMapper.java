@@ -14,7 +14,7 @@ public interface SysConfigMapper {
 
     void updateById(SysConfig record);
 
-    int deleteById(Integer SysConfigId);
+    int deleteById(Long SysConfigId);
 
     List<SysConfig> findAll();
 

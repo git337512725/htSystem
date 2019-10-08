@@ -30,7 +30,7 @@ public class ${model_simple_name}ServiceImpl  implements  ${model_simple_name}Se
     }
 
     @Override
-    public int deleteById(Integer ${model_simple_name}Id) {
+    public int deleteById(Long ${model_simple_name}Id) {
         return  ${model_simple_name?uncap_first}Mapper.deleteById(${model_simple_name}Id);
     }
 

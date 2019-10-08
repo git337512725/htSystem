@@ -10,7 +10,13 @@
     <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
 </head>
 <body>
-
+<div class="searchTable">
+    搜索ID：
+    <div class="layui-inline">
+        <input class="layui-input" name="id" id="searchReload" autocomplete="off">
+    </div>
+    <button id="searchBtn" class="layui-btn" data-type="reload">搜索</button>
+</div>
 <table class="layui-hide" id="${model_simple_name}" lay-filter="${model_simple_name}"></table>
 
 <script type="text/html" id="toolbarDemo">
@@ -29,7 +35,7 @@
 <!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
 
 <script>
-    layui.use('table', function(){
+    layui.use(['jquery','table'], function(){
         var table = layui.table;
 
         table.render({
@@ -70,11 +76,45 @@
 
         });
 
+
+
+        var $ = layui.$, active = {
+            reload: function(){
+                var id$_ = $('#searchReload');
+                var queryWhere = {};
+                queryWhere['id'] = id$_.val();
+                //执行重载
+                table.reload('${model_simple_name}', {
+                    page: {
+                        curr: 1 //重新从第 1 页开始
+                    }
+                    ,where: queryWhere
+                }, 'data');
+            }
+        };
+
+        $('.searchTable .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+
         //头工具栏事件
         table.on('toolbar(${model_simple_name})', function(obj){
             var checkStatus = table.checkStatus(obj.config.id);
             switch(obj.event){
                 //自定义头工具栏右侧图标 - 提示
+                case 'add':
+                    //iframe层-父子操作
+                {
+                    layer.open({
+                        type: 2,
+                        area: ['700px', '450px'],
+                        fixed: false, //不固定
+                        maxmin: true,
+                        content: '/${model_simple_name?uncap_first}/add'
+                    });
+                }
+                    break;
                 case 'LAYTABLE_TIPS':
                     layer.alert('这是工具栏右侧自定义的一个图标按钮');
                     break;
@@ -88,44 +128,26 @@
             if(obj.event === 'del'){
                 layer.confirm('真的删除行么', function(index){
                     obj.del();
-                    del(data.id);
+                    $.post("/${model_simple_name?uncap_first}/delete",{"id":data.id},function (data) {
+                        layer.msg(data);
+                    },"json");
                     layer.close(index);
                 });
-            } else if(obj.event === 'add'){
-                add(data.id);
             } else if(obj.event === 'edit'){
-                edit(data.id);
+                //iframe层-父子操作
+                layer.open({
+                    type: 2,
+                    area: ['700px', '450px'],
+                    fixed: false, //不固定
+                    maxmin: true,
+                    content: '/${model_simple_name?uncap_first}/update?id=' + data.id
+                });
             }
         });
+
     });
 
-    function add() {
-        //iframe层-父子操作
-        layer.open({
-            type: 2,
-            area: ['700px', '450px'],
-            fixed: false, //不固定
-            maxmin: true,
-            content: '${list_add}'
-        });
-    }
 
-    function edit(objId) {
-        //iframe层-父子操作
-        layer.open({
-            type: 2,
-            area: ['700px', '450px'],
-            fixed: false, //不固定
-            maxmin: true,
-            content: '${list_update}?id=' + objId
-        });
-    }
-
-    function del(objId){
-        $.post("${list_delete}",{"id":objId},function (data) {
-            layer.msg(data);
-        },"json");
-    }
 </script>
 
 </body>

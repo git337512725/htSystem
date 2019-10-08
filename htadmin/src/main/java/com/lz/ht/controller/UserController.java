@@ -38,16 +38,17 @@ public class UserController extends BaseController{
 
     @RequestMapping(value = "/user/list",method = {RequestMethod.POST})
     @ResponseBody
-    public PageModel list(User user, PageModel page)throws Exception{
+    public PageModel list(User user, PageModel<User> page)throws Exception{
+           page.init();
            List<User> list = userServiceImpl.findPageList(page,user);
            long count = userServiceImpl.findCount(user);
-           PageModel<User> pageModel = new PageModel<User>(page.getCurrentPageNum(),count,list);
-           return pageModel;
+           page.packData(count,list);
+           return page;
     }
 
     @RequestMapping(value = "/user/add",method = {RequestMethod.GET})
     public String addInit(User user,Model model){
-        return "user/user_list";
+        return "user/user_add";
     }
 
     @RequestMapping(value = "/user/add",method = {RequestMethod.POST})
@@ -59,7 +60,7 @@ public class UserController extends BaseController{
 
     @RequestMapping(value = "/user/update",method = {RequestMethod.GET})
     public String updateInit(User user,Model model){
-        return "user/user_list";
+        return "user/user_update";
     }
 
     @RequestMapping(value = "/user/update",method = {RequestMethod.POST})
@@ -72,7 +73,7 @@ public class UserController extends BaseController{
     @RequestMapping(value = "/user/delete",method = {RequestMethod.POST})
     @ResponseBody
     public Result delete(User user){
-        userServiceImpl.deleteById(user.getId().intValue());
+        userServiceImpl.deleteById(user.getId());
         return Result.genSuccessResult();
     }
 }

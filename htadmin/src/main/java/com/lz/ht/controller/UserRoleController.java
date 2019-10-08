@@ -31,23 +31,24 @@ public class UserRoleController extends BaseController{
 
     @RequestMapping(value = "/userRole/list",method = {RequestMethod.GET})
     public String userRole_list()throws Exception{
-        return "user/user_list";
+        return "userRole/userRole_list";
     }
 
 
 
     @RequestMapping(value = "/userRole/list",method = {RequestMethod.POST})
     @ResponseBody
-    public PageModel list(UserRole userRole, PageModel page)throws Exception{
+    public PageModel list(UserRole userRole, PageModel<UserRole> page)throws Exception{
+           page.init();
            List<UserRole> list = userRoleServiceImpl.findPageList(page,userRole);
            long count = userRoleServiceImpl.findCount(userRole);
-           PageModel<UserRole> pageModel = new PageModel<UserRole>(page.getCurrentPageNum(),count,list);
-           return pageModel;
+           page.packData(count,list);
+           return page;
     }
 
     @RequestMapping(value = "/userRole/add",method = {RequestMethod.GET})
     public String addInit(UserRole userRole,Model model){
-        return "userRole/userRole_list";
+        return "userRole/userRole_add";
     }
 
     @RequestMapping(value = "/userRole/add",method = {RequestMethod.POST})
@@ -59,7 +60,7 @@ public class UserRoleController extends BaseController{
 
     @RequestMapping(value = "/userRole/update",method = {RequestMethod.GET})
     public String updateInit(UserRole userRole,Model model){
-        return "userRole/userRole_list";
+        return "userRole/userRole_update";
     }
 
     @RequestMapping(value = "/userRole/update",method = {RequestMethod.POST})
@@ -72,7 +73,7 @@ public class UserRoleController extends BaseController{
     @RequestMapping(value = "/userRole/delete",method = {RequestMethod.POST})
     @ResponseBody
     public Result delete(UserRole userRole){
-        userRoleServiceImpl.deleteById(userRole.getId().intValue());
+        userRoleServiceImpl.deleteById(userRole.getId());
         return Result.genSuccessResult();
     }
 }

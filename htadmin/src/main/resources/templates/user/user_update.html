@@ -6,8 +6,9 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" th:href="@{/alllayui/layui/css/layui.css"  media="all">
+    <link rel="stylesheet" th:href="@{/alllayui/layui/css/layui.css}"  media="all">
     <script th:src="@{/alllayui/layui/layui.js}" charset="utf-8"></script>
+    <script th:src="@{/system/js/jquery.min.js}" charset="utf-8"></script>
     <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
 </head>
 <body>
@@ -19,21 +20,21 @@
 <form class="layui-form" action="">
                 <input type="hidden" name="id" value="${id}"  >
                 <div class="layui-form-item">
-                    <label class="layui-form-label"></label>
+                    <label class="layui-form-label">名称</label>
                     <div class="layui-input-block">
-                        <input type="text" name='userName'  lay-verify="required" lay-reqtext="为必填项" placeholder="请输入" autocomplete="off" class="layui-input">
+                        <input type="text" name='userName'  lay-verify="required" lay-reqtext="名称为必填项" placeholder="请输入名称" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label"></label>
+                    <label class="layui-form-label">密码</label>
                     <div class="layui-input-block">
-                        <input type="text" name='password'  lay-verify="required" lay-reqtext="为必填项" placeholder="请输入" autocomplete="off" class="layui-input">
+                        <input type="text" name='password'  lay-verify="required" lay-reqtext="密码为必填项" placeholder="请输入密码" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label"> 0 启用 1 禁用</label>
+                    <label class="layui-form-label">状态0启用1禁用</label>
                     <div class="layui-input-block">
-                        <input type="text" name='enable'  lay-verify="required" lay-reqtext=" 0 启用 1 禁用为必填项" placeholder="请输入 0 启用 1 禁用" autocomplete="off" class="layui-input">
+                        <input type="text" name='enable'  lay-verify="required" lay-reqtext="状态0启用1禁用为必填项" placeholder="请输入状态0启用1禁用" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
@@ -55,9 +56,9 @@
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label">部门id</label>
+                    <label class="layui-form-label">部门ID</label>
                     <div class="layui-input-block">
-                        <input type="text" name='deptId'  lay-verify="required" lay-reqtext="部门id为必填项" placeholder="请输入部门id" autocomplete="off" class="layui-input">
+                        <input type="text" name='deptId'  lay-verify="required" lay-reqtext="部门ID为必填项" placeholder="请输入部门ID" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">

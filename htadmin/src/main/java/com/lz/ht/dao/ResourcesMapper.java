@@ -14,7 +14,7 @@ public interface ResourcesMapper {
 
     void updateById(Resources record);
 
-    int deleteById(Integer ResourcesId);
+    int deleteById(Long ResourcesId);
 
     List<Resources> findAll();
 

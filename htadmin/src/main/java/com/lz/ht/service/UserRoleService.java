@@ -11,7 +11,7 @@ public interface UserRoleService {
 
     void updateById(UserRole record);
 
-    int deleteById(Integer UserRoleId);
+    int deleteById(Long UserRoleId);
 
     List<UserRole> findAll();
 

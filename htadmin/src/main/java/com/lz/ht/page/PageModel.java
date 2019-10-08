@@ -47,52 +47,33 @@ public class PageModel<T> {
 
 
     public long getMsFirst() {
-        if(currentPageNum <= 1L){
-            msFirst = 0L;
-        }else{
-            msFirst = currentPageNum * pageSize;
-        }
-        return  msFirst;
+        return  this.msFirst;
     }
 
     public void setMsFirst(long msFirst) {
-        if(msFirst<0){
-            this.msFirst = 0L;
-        }
         this.msFirst = msFirst;
     }
 
     public long getMsLast() {
-        if(msLast == 0){
-            this.msLast = this.pageSize;
-        }
-        return msLast;
+        return this.msLast;
     }
 
     public void setMsLast(long msLast) {
-        if(msLast<0){
-            this.msLast = this.pageSize;
-        }
         this.msLast = msLast;
+        if(this.msLast<0)  this.msLast =  DEFAULT_PAGE_SIZE;
     }
 
     public void setCurrentPageNum(long currentPageNum){
-        if(currentPageNum<1L){
-            currentPageNum = 1L;
-        }
         this.currentPageNum = currentPageNum;
+        if(this.currentPageNum <1L)  this.currentPageNum = 1L;
     }
 
-    public PageModel(){
-        init();
-    }
+    public PageModel(){}
     public void init(){
-        if(currentPageNum == 0L){
-            currentPageNum = 1L;
-            this.pageSize = DEFAULT_PAGE_SIZE;
-            this.msFirst = 0L;
-            this.msLast = DEFAULT_PAGE_SIZE;
-        }
+        if(this.currentPageNum <= 0) currentPageNum = 1;
+        if(this.pageSize <=0) this.pageSize = DEFAULT_PAGE_SIZE;
+        this.msFirst = (this.currentPageNum - 1) * this.pageSize;
+        this.msLast  = this.pageSize;
     }
 
     public PageModel(long currentPageNum,long totalRecords ,List<T> recordList){
@@ -110,6 +91,14 @@ public class PageModel<T> {
         this.recordList = recordList;
         setTotalPage();
     }
+
+
+    public void packData(long totalRecords,List<T> recordList){
+        this.totalRecords = totalRecords;
+        this.recordList = recordList;
+        setTotalPage();
+    }
+
 
 
     public void setTotalPage(){

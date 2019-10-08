@@ -1,5 +1,8 @@
 package com.lz.ht.result;
 
+import lombok.Data;
+
+@Data
 public class Result {
     private String msgCode;
     private String message;

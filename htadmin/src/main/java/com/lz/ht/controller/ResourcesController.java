@@ -31,23 +31,24 @@ public class ResourcesController extends BaseController{
 
     @RequestMapping(value = "/resources/list",method = {RequestMethod.GET})
     public String resources_list()throws Exception{
-        return "user/user_list";
+        return "resources/resources_list";
     }
 
 
 
     @RequestMapping(value = "/resources/list",method = {RequestMethod.POST})
     @ResponseBody
-    public PageModel list(Resources resources, PageModel page)throws Exception{
+    public PageModel list(Resources resources, PageModel<Resources> page)throws Exception{
+           page.init();
            List<Resources> list = resourcesServiceImpl.findPageList(page,resources);
            long count = resourcesServiceImpl.findCount(resources);
-           PageModel<Resources> pageModel = new PageModel<Resources>(page.getCurrentPageNum(),count,list);
-           return pageModel;
+           page.packData(count,list);
+           return page;
     }
 
     @RequestMapping(value = "/resources/add",method = {RequestMethod.GET})
     public String addInit(Resources resources,Model model){
-        return "resources/resources_list";
+        return "resources/resources_add";
     }
 
     @RequestMapping(value = "/resources/add",method = {RequestMethod.POST})
@@ -59,7 +60,7 @@ public class ResourcesController extends BaseController{
 
     @RequestMapping(value = "/resources/update",method = {RequestMethod.GET})
     public String updateInit(Resources resources,Model model){
-        return "resources/resources_list";
+        return "resources/resources_update";
     }
 
     @RequestMapping(value = "/resources/update",method = {RequestMethod.POST})
@@ -72,7 +73,7 @@ public class ResourcesController extends BaseController{
     @RequestMapping(value = "/resources/delete",method = {RequestMethod.POST})
     @ResponseBody
     public Result delete(Resources resources){
-        resourcesServiceImpl.deleteById(resources.getId().intValue());
+        resourcesServiceImpl.deleteById(resources.getId());
         return Result.genSuccessResult();
     }
 }

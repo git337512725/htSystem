@@ -30,7 +30,7 @@ public class RoleServiceImpl  implements  RoleService {
     }
 
     @Override
-    public int deleteById(Integer RoleId) {
+    public int deleteById(Long RoleId) {
         return  roleMapper.deleteById(RoleId);
     }
 

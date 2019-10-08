@@ -31,23 +31,24 @@ public class ${model_simple_name}Controller extends BaseController{
 
     @RequestMapping(value = "${list_url}",method = {RequestMethod.GET})
     public String ${model_simple_name?uncap_first}_list()throws Exception{
-        return "user/user_list";
+        return "${model_simple_name?uncap_first}/${model_simple_name?uncap_first}_list";
     }
 
 
 
     @RequestMapping(value = "${list_url}",method = {RequestMethod.POST})
     @ResponseBody
-    public PageModel list(${model_simple_name} ${model_simple_name?uncap_first}, PageModel page)throws Exception{
+    public PageModel list(${model_simple_name} ${model_simple_name?uncap_first}, PageModel<${model_simple_name}> page)throws Exception{
+           page.init();
            List<${model_simple_name}> list = ${model_simple_name?uncap_first}ServiceImpl.findPageList(page,${model_simple_name?uncap_first});
            long count = ${model_simple_name?uncap_first}ServiceImpl.findCount(${model_simple_name?uncap_first});
-           PageModel<${model_simple_name}> pageModel = new PageModel<${model_simple_name}>(page.getCurrentPageNum(),count,list);
-           return pageModel;
+           page.packData(count,list);
+           return page;
     }
 
     @RequestMapping(value = "${list_add}",method = {RequestMethod.GET})
     public String addInit(${model_simple_name} ${model_simple_name?uncap_first},Model model){
-        return "${model_simple_name?uncap_first}/${model_simple_name?uncap_first}_list";
+        return "${model_simple_name?uncap_first}/${model_simple_name?uncap_first}_add";
     }
 
     @RequestMapping(value = "${list_add}",method = {RequestMethod.POST})
@@ -59,7 +60,7 @@ public class ${model_simple_name}Controller extends BaseController{
 
     @RequestMapping(value = "${list_update}",method = {RequestMethod.GET})
     public String updateInit(${model_simple_name} ${model_simple_name?uncap_first},Model model){
-        return "${model_simple_name?uncap_first}/${model_simple_name?uncap_first}_list";
+        return "${model_simple_name?uncap_first}/${model_simple_name?uncap_first}_update";
     }
 
     @RequestMapping(value = "${list_update}",method = {RequestMethod.POST})
@@ -72,7 +73,7 @@ public class ${model_simple_name}Controller extends BaseController{
     @RequestMapping(value = "${list_delete}",method = {RequestMethod.POST})
     @ResponseBody
     public Result delete(${model_simple_name} ${model_simple_name?uncap_first}){
-        ${model_simple_name?uncap_first}ServiceImpl.deleteById(${model_simple_name?uncap_first}.getId().intValue());
+        ${model_simple_name?uncap_first}ServiceImpl.deleteById(${model_simple_name?uncap_first}.getId());
         return Result.genSuccessResult();
     }
 }

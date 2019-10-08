@@ -30,7 +30,7 @@ public class SysConfigServiceImpl  implements  SysConfigService {
     }
 
     @Override
-    public int deleteById(Integer SysConfigId) {
+    public int deleteById(Long SysConfigId) {
         return  sysConfigMapper.deleteById(SysConfigId);
     }
 

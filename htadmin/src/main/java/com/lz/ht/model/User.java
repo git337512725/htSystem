@@ -4,10 +4,13 @@ import java.sql.*;
 import java.util.Date;
 
 public class User {
+        /** ID */
         private Long id;
+        /** 名称 */
         private String userName;
+        /** 密码 */
         private String password;
-        /**  0 启用 1 禁用 */
+        /** 状态0启用1禁用 */
         private Long enable;
         /** 手机号码 */
         private String phoneNo;
@@ -15,7 +18,7 @@ public class User {
         private String mail;
         /** 添加时间 */
         private java.sql.Date addTime;
-        /** 部门id */
+        /** 部门ID */
         private Long deptId;
         /** 部门名称 */
         private String deptName;

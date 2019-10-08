@@ -31,23 +31,24 @@ public class DeptController extends BaseController{
 
     @RequestMapping(value = "/dept/list",method = {RequestMethod.GET})
     public String dept_list()throws Exception{
-        return "user/user_list";
+        return "dept/dept_list";
     }
 
 
 
     @RequestMapping(value = "/dept/list",method = {RequestMethod.POST})
     @ResponseBody
-    public PageModel list(Dept dept, PageModel page)throws Exception{
+    public PageModel list(Dept dept, PageModel<Dept> page)throws Exception{
+           page.init();
            List<Dept> list = deptServiceImpl.findPageList(page,dept);
            long count = deptServiceImpl.findCount(dept);
-           PageModel<Dept> pageModel = new PageModel<Dept>(page.getCurrentPageNum(),count,list);
-           return pageModel;
+           page.packData(count,list);
+           return page;
     }
 
     @RequestMapping(value = "/dept/add",method = {RequestMethod.GET})
     public String addInit(Dept dept,Model model){
-        return "dept/dept_list";
+        return "dept/dept_add";
     }
 
     @RequestMapping(value = "/dept/add",method = {RequestMethod.POST})
@@ -59,7 +60,7 @@ public class DeptController extends BaseController{
 
     @RequestMapping(value = "/dept/update",method = {RequestMethod.GET})
     public String updateInit(Dept dept,Model model){
-        return "dept/dept_list";
+        return "dept/dept_update";
     }
 
     @RequestMapping(value = "/dept/update",method = {RequestMethod.POST})
@@ -72,7 +73,7 @@ public class DeptController extends BaseController{
     @RequestMapping(value = "/dept/delete",method = {RequestMethod.POST})
     @ResponseBody
     public Result delete(Dept dept){
-        deptServiceImpl.deleteById(dept.getId().intValue());
+        deptServiceImpl.deleteById(dept.getId());
         return Result.genSuccessResult();
     }
 }
