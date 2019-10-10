@@ -18,41 +18,41 @@
 </fieldset>
 
 <form class="layui-form" action="">
-                <input type="hidden" name="id" value="${id}"  >
+                <input type="hidden" name="id" th:value='${role.id}'  >
                 <div class="layui-form-item">
                     <label class="layui-form-label">角色id</label>
                     <div class="layui-input-block">
-                        <input type="text" name='roleKey'  lay-verify="required" lay-reqtext="角色id为必填项" placeholder="请输入角色id" autocomplete="off" class="layui-input">
+                        <input type="text" name='roleKey' th:value='${role.roleKey}' lay-verify="required" lay-reqtext="角色id为必填项" placeholder="请输入角色id" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">角色描述</label>
                     <div class="layui-input-block">
-                        <input type="text" name='roleDesc'  lay-verify="required" lay-reqtext="角色描述为必填项" placeholder="请输入角色描述" autocomplete="off" class="layui-input">
+                        <input type="text" name='roleDesc' th:value='${role.roleDesc}' lay-verify="required" lay-reqtext="角色描述为必填项" placeholder="请输入角色描述" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">父角色id</label>
                     <div class="layui-input-block">
-                        <input type="text" name='pRoleKey'  lay-verify="required" lay-reqtext="父角色id为必填项" placeholder="请输入父角色id" autocomplete="off" class="layui-input">
+                        <input type="text" name='pRoleKey' th:value='${role.pRoleKey}' lay-verify="required" lay-reqtext="父角色id为必填项" placeholder="请输入父角色id" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">父角色描述</label>
                     <div class="layui-input-block">
-                        <input type="text" name='pRoleDesc'  lay-verify="required" lay-reqtext="父角色描述为必填项" placeholder="请输入父角色描述" autocomplete="off" class="layui-input">
+                        <input type="text" name='pRoleDesc' th:value='${role.pRoleDesc}' lay-verify="required" lay-reqtext="父角色描述为必填项" placeholder="请输入父角色描述" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">0 启用 1 禁用</label>
                     <div class="layui-input-block">
-                        <input type="text" name='enable'  lay-verify="required" lay-reqtext="0 启用 1 禁用为必填项" placeholder="请输入0 启用 1 禁用" autocomplete="off" class="layui-input">
+                        <input type="text" name='enable' th:value='${role.enable}' lay-verify="required" lay-reqtext="0 启用 1 禁用为必填项" placeholder="请输入0 启用 1 禁用" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">排序</label>
                     <div class="layui-input-block">
-                        <input type="text" name='sort'  lay-verify="required" lay-reqtext="排序为必填项" placeholder="请输入排序" autocomplete="off" class="layui-input">
+                        <input type="text" name='sort' th:value='${role.sort}' lay-verify="required" lay-reqtext="排序为必填项" placeholder="请输入排序" autocomplete="off" class="layui-input">
                     </div>
                 </div>
     <div class="layui-form-item">
@@ -62,16 +62,28 @@
     </div>
 </form>
 <script>
-    layui.use(['form'], function(){
-        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+    layui.use(['jquery','form'], function(){
+        var thisIndex = parent.layer.getFrameIndex(window.name);
         var form = layui.form
-            ,layer = layui.layer ;
-        //监听提交
+            ,layer = layui.layer
+            ,$ = layui.$ ;
+        var parentLayer = parent.layer;
+        var pWindow = parent ;
         form.on('submit(subBtn)', function(data){
-            var data2Send = JSON.stringify(data.field);
+            let data2Send = data.field;
             $.post("/role/update",data2Send,function (res) {
-                layer.msg(res, function(){
-                    parent.layer.close(index);
+                var msg = "";
+                if(res.message == 'SUCCESS'){
+                    msg = '修改成功!窗口关闭';
+                } else {
+                    msg = '修改失败!窗口关闭'
+                }
+                parentLayer.msg(msg, {
+                    icon: 1,
+                    time: 2000
+                }, function(){
+                    parentLayer.close(thisIndex);
+                    pWindow.document.getElementById('searchBtn').click();
                 });
             },"json");
         });

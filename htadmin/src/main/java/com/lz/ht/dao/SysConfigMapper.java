@@ -16,6 +16,8 @@ public interface SysConfigMapper {
 
     int deleteById(Long SysConfigId);
 
+    SysConfig  findById(Long id);
+
     List<SysConfig> findAll();
 
     List<SysConfig> findList(SysConfig record);

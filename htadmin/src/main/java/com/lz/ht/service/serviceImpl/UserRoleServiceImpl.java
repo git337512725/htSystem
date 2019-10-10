@@ -35,6 +35,11 @@ public class UserRoleServiceImpl  implements  UserRoleService {
     }
 
     @Override
+    public UserRole findById(Long UserRoleId) {
+        return  userRoleMapper.findById(UserRoleId);
+    }
+
+    @Override
     public List<UserRole> findAll() {
         return userRoleMapper.findAll();
     }

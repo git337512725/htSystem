@@ -60,6 +60,8 @@ public class ${model_simple_name}Controller extends BaseController{
 
     @RequestMapping(value = "${list_update}",method = {RequestMethod.GET})
     public String updateInit(${model_simple_name} ${model_simple_name?uncap_first},Model model){
+        ${model_simple_name?uncap_first} = ${model_simple_name?uncap_first}ServiceImpl.findById(${model_simple_name?uncap_first}.getId());
+        model.addAttribute("${model_simple_name?uncap_first}",${model_simple_name?uncap_first});
         return "${model_simple_name?uncap_first}/${model_simple_name?uncap_first}_update";
     }
 

@@ -45,6 +45,10 @@
         delete from t_resources where id = #{id}
     </delete>
 
+    <select id="findById"   resultMap="baseResultMap"  parameterType="java.lang.Long" >
+        select * from  t_resources t  WHERE id = #{id,jdbcType=BIGINT}
+    </select>
+
     <select id="findAll"   resultMap="baseResultMap">
         select * from  t_resources t
     </select>

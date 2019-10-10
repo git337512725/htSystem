@@ -60,6 +60,8 @@ public class RoleResourcesController extends BaseController{
 
     @RequestMapping(value = "/roleResources/update",method = {RequestMethod.GET})
     public String updateInit(RoleResources roleResources,Model model){
+        roleResources = roleResourcesServiceImpl.findById(roleResources.getId());
+        model.addAttribute("roleResources",roleResources);
         return "roleResources/roleResources_update";
     }
 

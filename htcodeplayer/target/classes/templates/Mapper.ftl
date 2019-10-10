@@ -16,6 +16,8 @@ public interface ${model_simple_name}Mapper {
 
     int deleteById(Long ${model_simple_name}Id);
 
+    ${model_simple_name}  findById(Long id);
+
     List<${model_simple_name}> findAll();
 
     List<${model_simple_name}> findList(${model_simple_name} record);

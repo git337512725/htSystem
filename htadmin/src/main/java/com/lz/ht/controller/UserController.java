@@ -60,6 +60,8 @@ public class UserController extends BaseController{
 
     @RequestMapping(value = "/user/update",method = {RequestMethod.GET})
     public String updateInit(User user,Model model){
+        user = userServiceImpl.findById(user.getId());
+        model.addAttribute("user",user);
         return "user/user_update";
     }
 

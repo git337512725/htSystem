@@ -35,6 +35,11 @@ public class ${model_simple_name}ServiceImpl  implements  ${model_simple_name}Se
     }
 
     @Override
+    public ${model_simple_name} findById(Long ${model_simple_name}Id) {
+        return  ${model_simple_name?uncap_first}Mapper.findById(${model_simple_name}Id);
+    }
+
+    @Override
     public List<${model_simple_name}> findAll() {
         return ${model_simple_name?uncap_first}Mapper.findAll();
     }

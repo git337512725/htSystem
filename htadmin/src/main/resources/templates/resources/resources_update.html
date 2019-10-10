@@ -18,47 +18,47 @@
 </fieldset>
 
 <form class="layui-form" action="">
-                <input type="hidden" name="id" value="${id}"  >
+                <input type="hidden" name="id" th:value='${resources.id}'  >
                 <div class="layui-form-item">
                     <label class="layui-form-label">资源名称</label>
                     <div class="layui-input-block">
-                        <input type="text" name='name'  lay-verify="required" lay-reqtext="资源名称为必填项" placeholder="请输入资源名称" autocomplete="off" class="layui-input">
+                        <input type="text" name='name' th:value='${resources.name}' lay-verify="required" lay-reqtext="资源名称为必填项" placeholder="请输入资源名称" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">资源id</label>
                     <div class="layui-input-block">
-                        <input type="text" name='resKey'  lay-verify="required" lay-reqtext="资源id为必填项" placeholder="请输入资源id" autocomplete="off" class="layui-input">
+                        <input type="text" name='resKey' th:value='${resources.resKey}' lay-verify="required" lay-reqtext="资源id为必填项" placeholder="请输入资源id" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">资源链接</label>
                     <div class="layui-input-block">
-                        <input type="text" name='resUrl'  lay-verify="required" lay-reqtext="资源链接为必填项" placeholder="请输入资源链接" autocomplete="off" class="layui-input">
+                        <input type="text" name='resUrl' th:value='${resources.resUrl}' lay-verify="required" lay-reqtext="资源链接为必填项" placeholder="请输入资源链接" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">父资源id</label>
                     <div class="layui-input-block">
-                        <input type="text" name='presKey'  lay-verify="required" lay-reqtext="父资源id为必填项" placeholder="请输入父资源id" autocomplete="off" class="layui-input">
+                        <input type="text" name='presKey' th:value='${resources.presKey}' lay-verify="required" lay-reqtext="父资源id为必填项" placeholder="请输入父资源id" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">父资源名称</label>
                     <div class="layui-input-block">
-                        <input type="text" name='pName'  lay-verify="required" lay-reqtext="父资源名称为必填项" placeholder="请输入父资源名称" autocomplete="off" class="layui-input">
+                        <input type="text" name='pName' th:value='${resources.pName}' lay-verify="required" lay-reqtext="父资源名称为必填项" placeholder="请输入父资源名称" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">资源排序</label>
                     <div class="layui-input-block">
-                        <input type="text" name='sort'  lay-verify="required" lay-reqtext="资源排序为必填项" placeholder="请输入资源排序" autocomplete="off" class="layui-input">
+                        <input type="text" name='sort' th:value='${resources.sort}' lay-verify="required" lay-reqtext="资源排序为必填项" placeholder="请输入资源排序" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">0 启用 1 禁用</label>
                     <div class="layui-input-block">
-                        <input type="text" name='type'  lay-verify="required" lay-reqtext="0 启用 1 禁用为必填项" placeholder="请输入0 启用 1 禁用" autocomplete="off" class="layui-input">
+                        <input type="text" name='type' th:value='${resources.type}' lay-verify="required" lay-reqtext="0 启用 1 禁用为必填项" placeholder="请输入0 启用 1 禁用" autocomplete="off" class="layui-input">
                     </div>
                 </div>
     <div class="layui-form-item">
@@ -68,16 +68,28 @@
     </div>
 </form>
 <script>
-    layui.use(['form'], function(){
-        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+    layui.use(['jquery','form'], function(){
+        var thisIndex = parent.layer.getFrameIndex(window.name);
         var form = layui.form
-            ,layer = layui.layer ;
-        //监听提交
+            ,layer = layui.layer
+            ,$ = layui.$ ;
+        var parentLayer = parent.layer;
+        var pWindow = parent ;
         form.on('submit(subBtn)', function(data){
-            var data2Send = JSON.stringify(data.field);
+            let data2Send = data.field;
             $.post("/resources/update",data2Send,function (res) {
-                layer.msg(res, function(){
-                    parent.layer.close(index);
+                var msg = "";
+                if(res.message == 'SUCCESS'){
+                    msg = '修改成功!窗口关闭';
+                } else {
+                    msg = '修改失败!窗口关闭'
+                }
+                parentLayer.msg(msg, {
+                    icon: 1,
+                    time: 2000
+                }, function(){
+                    parentLayer.close(thisIndex);
+                    pWindow.document.getElementById('searchBtn').click();
                 });
             },"json");
         });

@@ -35,6 +35,11 @@ public class ResourcesServiceImpl  implements  ResourcesService {
     }
 
     @Override
+    public Resources findById(Long ResourcesId) {
+        return  resourcesMapper.findById(ResourcesId);
+    }
+
+    @Override
     public List<Resources> findAll() {
         return resourcesMapper.findAll();
     }

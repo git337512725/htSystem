@@ -35,6 +35,11 @@ public class RoleResourcesServiceImpl  implements  RoleResourcesService {
     }
 
     @Override
+    public RoleResources findById(Long RoleResourcesId) {
+        return  roleResourcesMapper.findById(RoleResourcesId);
+    }
+
+    @Override
     public List<RoleResources> findAll() {
         return roleResourcesMapper.findAll();
     }

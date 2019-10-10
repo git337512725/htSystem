@@ -35,6 +35,11 @@ public class UserServiceImpl  implements  UserService {
     }
 
     @Override
+    public User findById(Long UserId) {
+        return  userMapper.findById(UserId);
+    }
+
+    @Override
     public List<User> findAll() {
         return userMapper.findAll();
     }

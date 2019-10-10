@@ -11,7 +11,9 @@ public interface ${model_simple_name}Service {
 
     void updateById(${model_simple_name} record);
 
-    int deleteById(Long ${model_simple_name}Id);
+    int deleteById(Long ${model_simple_name?uncap_first}Id);
+
+    ${model_simple_name} findById(Long ${model_simple_name?uncap_first}Id);
 
     List<${model_simple_name}> findAll();
 

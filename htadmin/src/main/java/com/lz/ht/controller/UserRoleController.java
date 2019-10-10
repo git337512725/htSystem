@@ -60,6 +60,8 @@ public class UserRoleController extends BaseController{
 
     @RequestMapping(value = "/userRole/update",method = {RequestMethod.GET})
     public String updateInit(UserRole userRole,Model model){
+        userRole = userRoleServiceImpl.findById(userRole.getId());
+        model.addAttribute("userRole",userRole);
         return "userRole/userRole_update";
     }
 

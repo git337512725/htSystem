@@ -60,6 +60,8 @@ public class DeptController extends BaseController{
 
     @RequestMapping(value = "/dept/update",method = {RequestMethod.GET})
     public String updateInit(Dept dept,Model model){
+        dept = deptServiceImpl.findById(dept.getId());
+        model.addAttribute("dept",dept);
         return "dept/dept_update";
     }
 

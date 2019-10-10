@@ -35,6 +35,11 @@ public class DeptServiceImpl  implements  DeptService {
     }
 
     @Override
+    public Dept findById(Long DeptId) {
+        return  deptMapper.findById(DeptId);
+    }
+
+    @Override
     public List<Dept> findAll() {
         return deptMapper.findAll();
     }

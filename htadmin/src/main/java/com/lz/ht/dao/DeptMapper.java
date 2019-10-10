@@ -16,6 +16,8 @@ public interface DeptMapper {
 
     int deleteById(Long DeptId);
 
+    Dept  findById(Long id);
+
     List<Dept> findAll();
 
     List<Dept> findList(Dept record);

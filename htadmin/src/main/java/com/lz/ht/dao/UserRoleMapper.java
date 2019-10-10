@@ -16,6 +16,8 @@ public interface UserRoleMapper {
 
     int deleteById(Long UserRoleId);
 
+    UserRole  findById(Long id);
+
     List<UserRole> findAll();
 
     List<UserRole> findList(UserRole record);

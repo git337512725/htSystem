@@ -60,6 +60,8 @@ public class SysConfigController extends BaseController{
 
     @RequestMapping(value = "/sysConfig/update",method = {RequestMethod.GET})
     public String updateInit(SysConfig sysConfig,Model model){
+        sysConfig = sysConfigServiceImpl.findById(sysConfig.getId());
+        model.addAttribute("sysConfig",sysConfig);
         return "sysConfig/sysConfig_update";
     }
 

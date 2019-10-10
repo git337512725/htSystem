@@ -11,7 +11,9 @@ public interface SysConfigService {
 
     void updateById(SysConfig record);
 
-    int deleteById(Long SysConfigId);
+    int deleteById(Long sysConfigId);
+
+    SysConfig findById(Long sysConfigId);
 
     List<SysConfig> findAll();
 

@@ -21,12 +21,12 @@
     <#if model_columnList?exists>
         <#list model_columnList as model>
             <#if  (model.changeColumnName?uncap_first) == 'id' >
-                <input type="hidden" name="id" value="${r"${"}${model.changeColumnName?uncap_first}${r"}"}"  >
+                <input type="hidden" name="id" th:value='${r"${"}${model_simple_name?uncap_first}.${model.changeColumnName?uncap_first}${r"}"}'  >
             <#else>
                 <div class="layui-form-item">
                     <label class="layui-form-label">${model.columnComment!}</label>
                     <div class="layui-input-block">
-                        <input type="text" name=${r"'"}${model.changeColumnName?uncap_first}${r"'"}  lay-verify="required" lay-reqtext="${model.columnComment!}为必填项" placeholder="请输入${model.columnComment!}" autocomplete="off" class="layui-input">
+                        <input type="text" name=${r"'"}${model.changeColumnName?uncap_first}${r"'"} th:value='${r"${"}${model_simple_name?uncap_first}.${model.changeColumnName?uncap_first}${r"}"}' lay-verify="required" lay-reqtext="${model.columnComment!}为必填项" placeholder="请输入${model.columnComment!}" autocomplete="off" class="layui-input">
                     </div>
                 </div>
             </#if>
@@ -39,16 +39,28 @@
     </div>
 </form>
 <script>
-    layui.use(['form'], function(){
-        var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+    layui.use(['jquery','form'], function(){
+        var thisIndex = parent.layer.getFrameIndex(window.name);
         var form = layui.form
-            ,layer = layui.layer ;
-        //监听提交
+            ,layer = layui.layer
+            ,$ = layui.$ ;
+        var parentLayer = parent.layer;
+        var pWindow = parent ;
         form.on('submit(subBtn)', function(data){
-            var data2Send = JSON.stringify(data.field);
+            let data2Send = data.field;
             $.post("${list_update}",data2Send,function (res) {
-                layer.msg(res, function(){
-                    parent.layer.close(index);
+                var msg = "";
+                if(res.message == 'SUCCESS'){
+                    msg = '修改成功!窗口关闭';
+                } else {
+                    msg = '修改失败!窗口关闭'
+                }
+                parentLayer.msg(msg, {
+                    icon: 1,
+                    time: 2000
+                }, function(){
+                    parentLayer.close(thisIndex);
+                    pWindow.document.getElementById('searchBtn').click();
                 });
             },"json");
         });

@@ -11,7 +11,9 @@ public interface ResourcesService {
 
     void updateById(Resources record);
 
-    int deleteById(Long ResourcesId);
+    int deleteById(Long resourcesId);
+
+    Resources findById(Long resourcesId);
 
     List<Resources> findAll();
 

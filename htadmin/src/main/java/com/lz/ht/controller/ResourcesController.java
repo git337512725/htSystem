@@ -60,6 +60,8 @@ public class ResourcesController extends BaseController{
 
     @RequestMapping(value = "/resources/update",method = {RequestMethod.GET})
     public String updateInit(Resources resources,Model model){
+        resources = resourcesServiceImpl.findById(resources.getId());
+        model.addAttribute("resources",resources);
         return "resources/resources_update";
     }
 

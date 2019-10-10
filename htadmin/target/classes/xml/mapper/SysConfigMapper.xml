@@ -36,6 +36,10 @@
         delete from t_sys_config where id = #{id}
     </delete>
 
+    <select id="findById"   resultMap="baseResultMap"  parameterType="java.lang.Long" >
+        select * from  t_sys_config t  WHERE id = #{id,jdbcType=BIGINT}
+    </select>
+
     <select id="findAll"   resultMap="baseResultMap">
         select * from  t_sys_config t
     </select>

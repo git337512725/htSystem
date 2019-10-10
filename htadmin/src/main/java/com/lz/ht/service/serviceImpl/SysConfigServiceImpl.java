@@ -35,6 +35,11 @@ public class SysConfigServiceImpl  implements  SysConfigService {
     }
 
     @Override
+    public SysConfig findById(Long SysConfigId) {
+        return  sysConfigMapper.findById(SysConfigId);
+    }
+
+    @Override
     public List<SysConfig> findAll() {
         return sysConfigMapper.findAll();
     }

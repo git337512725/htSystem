@@ -36,6 +36,10 @@
         delete from ${table_name} where id = ${r"#{"}${'id'}${r"}"}
     </delete>
 
+    <select id="findById"   resultMap="baseResultMap"  parameterType="java.lang.Long" >
+        select * from  ${table_name} t  WHERE id = ${r"#{"}${'id'}${r",jdbcType=BIGINT}"}
+    </select>
+
     <select id="findAll"   resultMap="baseResultMap">
         select * from  ${table_name} t
     </select>

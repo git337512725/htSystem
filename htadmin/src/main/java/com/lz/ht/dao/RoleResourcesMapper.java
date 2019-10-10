@@ -16,6 +16,8 @@ public interface RoleResourcesMapper {
 
     int deleteById(Long RoleResourcesId);
 
+    RoleResources  findById(Long id);
+
     List<RoleResources> findAll();
 
     List<RoleResources> findList(RoleResources record);

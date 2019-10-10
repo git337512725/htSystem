@@ -11,7 +11,9 @@ public interface RoleService {
 
     void updateById(Role record);
 
-    int deleteById(Long RoleId);
+    int deleteById(Long roleId);
+
+    Role findById(Long roleId);
 
     List<Role> findAll();
 

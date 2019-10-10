@@ -11,7 +11,9 @@ public interface DeptService {
 
     void updateById(Dept record);
 
-    int deleteById(Long DeptId);
+    int deleteById(Long deptId);
+
+    Dept findById(Long deptId);
 
     List<Dept> findAll();
 
