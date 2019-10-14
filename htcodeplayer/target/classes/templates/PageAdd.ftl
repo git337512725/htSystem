@@ -20,15 +20,48 @@
 <form class="layui-form" action="">
 <#if model_columnList?exists>
 <#list model_columnList as model>
-<#if  (model.changeColumnName?uncap_first) == 'id' >
-<#else>
-    <div class="layui-form-item">
-        <label class="layui-form-label">${model.columnComment!}</label>
-        <div class="layui-input-block">
-            <input type="text" name=${r"'"}${model.changeColumnName?uncap_first}${r"'"}  lay-verify="required" lay-reqtext="${model.columnComment!}为必填项" placeholder="请输入${model.columnComment!}" autocomplete="off" class="layui-input">
+    <#if  (model.changeColumnName?uncap_first) == 'id' >
+    <#else>
+        <div class="layui-form-item">
+            <label class="layui-form-label">${(model.columnComment!"")?replace("<\\!--.*-->","","r")}</label>
+            <div class="layui-input-block">
+             <#if (model.columnComment?exists)>
+                 <#assign temp = (model.columnComment!"")?replace("<\\!--.*-->","","r")/>
+                 <#assign res = (model.columnComment!"")?replace((temp!""),"","r")?trim/>
+                 <#if (res?exists) && res?length gt 2>
+                     <#assign commentJsonText= res?replace("<!--","")?replace("-->","")?trim/>
+                      <#if commentJsonText??>
+                         <#if (commentJsonText!)?contains("formType")>
+                            <#assign data = commentJsonText?eval?eval  />
+                            <#switch (data.formType)>
+                                 <#case "select">
+                                     <select name=${r"'"}${model.changeColumnName?uncap_first}${r"'"}  lay-verify="required">
+                                         <option value="">请选择</option>
+                                         <#list  data.options as item >
+                                             <option value="${item.optValue}">${item.optText}</option>
+                                         </#list>
+                                     </select>
+                                     <#break>
+                                 <#case "text">
+                                     <input type="text" name=${r"'"}${model.changeColumnName?uncap_first}${r"'"}  lay-verify="required" lay-reqtext="${(model.columnComment)?replace("<\\!--.*-->","","r")}为必填项" placeholder="请输入${(model.columnComment)?replace("<\\!--.*-->","","r")}" autocomplete="off" class="layui-input">
+                                     <#break>
+                                 <#case "datePicker">
+                                     <input type="text" name=${r"'"}${model.changeColumnName?uncap_first}${r"'"}  lay-verify="required" lay-reqtext="${(model.columnComment)?replace("<\\!--.*-->","","r")}为必填项" placeholder="请输入${(model.columnComment)?replace("<\\!--.*-->","","r")}" autocomplete="off" class="layui-input datePicker">
+                                     <#break>
+                                 <#default>
+                                     ${'定义表单格式不对，请使用text,datePicker,select 其中一种'}
+                             </#switch>
+                         </#if>
+                     </#if>
+                 <#else>
+                  <input type="text" name=${r"'"}${model.changeColumnName?uncap_first}${r"'"}  lay-verify="required" lay-reqtext="${(model.columnComment!"")?replace("<\\!--.*-->","")}为必填项" placeholder="请输入${(model.columnComment!"")?replace("<\\!--.*-->","","r")}" autocomplete="off" class="layui-input">
+                 </#if>
+             <#else>
+                 <input type="text" name=${r"'"}${model.changeColumnName?uncap_first}${r"'"}  lay-verify="required" lay-reqtext="${(model.columnComment!"")?replace("<\\!--.*-->","","r")}为必填项" placeholder="请输入${(model.columnComment!"")?replace("<\\!--.*-->","","r")}" autocomplete="off" class="layui-input">
+            </#if>
+            </div>
         </div>
-    </div>
-</#if>
+   </#if>
 </#list>
 </#if>
     <div class="layui-form-item">
@@ -38,11 +71,22 @@
     </div>
 </form>
 <script>
-    layui.use(['jquery','form'], function(){
+    layui.use(['jquery','form','laydate'], function(){
         var thisIndex = parent.layer.getFrameIndex(window.name);
         var form = layui.form
             ,layer = layui.layer
             ,$ = layui.$ ;
+        var laydate = layui.laydate;
+
+        //同时绑定多个
+        lay('.datePicker').each(function(){
+            laydate.render({
+                elem: this
+                ,trigger: 'click'
+            });
+        });
+
+
         var parentLayer = parent.layer;
         var pWindow = parent ;
         form.on('submit(subBtn)', function(data){

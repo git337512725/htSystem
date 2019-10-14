@@ -10,13 +10,13 @@ public class User {
         private String userName;
         /** 密码 */
         private String password;
-        /** 状态0启用1禁用 */
+        /** 状态0启用1禁用<!-- "{\"formType\":\"select\",\"options\":[{\"optText\":\"启用\",\"optValue\":0},{\"optText\":\"禁用\",\"optValue\":1}]}" --> */
         private Long enable;
         /** 手机号码 */
         private String phoneNo;
         /** 邮箱 */
         private String mail;
-        /** 添加时间 */
+        /** 添加时间<!-- "{\"formType\":\"datePicker\"}" --> */
         private java.sql.Date addTime;
         /** 部门ID */
         private Long deptId;

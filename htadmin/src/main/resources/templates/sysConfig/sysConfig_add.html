@@ -18,30 +18,30 @@
 </fieldset>
 
 <form class="layui-form" action="">
-    <div class="layui-form-item">
-        <label class="layui-form-label">名称</label>
-        <div class="layui-input-block">
-            <input type="text" name='name'  lay-verify="required" lay-reqtext="名称为必填项" placeholder="请输入名称" autocomplete="off" class="layui-input">
+        <div class="layui-form-item">
+            <label class="layui-form-label">名称</label>
+            <div class="layui-input-block">
+                  <input type="text" name='name'  lay-verify="required" lay-reqtext="名称为必填项" placeholder="请输入名称" autocomplete="off" class="layui-input">
+            </div>
         </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">值</label>
-        <div class="layui-input-block">
-            <input type="text" name='value'  lay-verify="required" lay-reqtext="值为必填项" placeholder="请输入值" autocomplete="off" class="layui-input">
+        <div class="layui-form-item">
+            <label class="layui-form-label">值</label>
+            <div class="layui-input-block">
+                  <input type="text" name='value'  lay-verify="required" lay-reqtext="值为必填项" placeholder="请输入值" autocomplete="off" class="layui-input">
+            </div>
         </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">配置索引</label>
-        <div class="layui-input-block">
-            <input type="text" name='sysConfigIndex'  lay-verify="required" lay-reqtext="配置索引为必填项" placeholder="请输入配置索引" autocomplete="off" class="layui-input">
+        <div class="layui-form-item">
+            <label class="layui-form-label">配置索引</label>
+            <div class="layui-input-block">
+                  <input type="text" name='sysConfigIndex'  lay-verify="required" lay-reqtext="配置索引为必填项" placeholder="请输入配置索引" autocomplete="off" class="layui-input">
+            </div>
         </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">配置状态0启用1禁用</label>
-        <div class="layui-input-block">
-            <input type="text" name='delStatus'  lay-verify="required" lay-reqtext="配置状态0启用1禁用为必填项" placeholder="请输入配置状态0启用1禁用" autocomplete="off" class="layui-input">
+        <div class="layui-form-item">
+            <label class="layui-form-label">配置状态0启用1禁用</label>
+            <div class="layui-input-block">
+                  <input type="text" name='delStatus'  lay-verify="required" lay-reqtext="配置状态0启用1禁用为必填项" placeholder="请输入配置状态0启用1禁用" autocomplete="off" class="layui-input">
+            </div>
         </div>
-    </div>
     <div class="layui-form-item">
         <div class="layui-input-block">
             <button type="submit" class="layui-btn" lay-submit="" lay-filter="subBtn">提交</button>
@@ -49,11 +49,22 @@
     </div>
 </form>
 <script>
-    layui.use(['jquery','form'], function(){
+    layui.use(['jquery','form','laydate'], function(){
         var thisIndex = parent.layer.getFrameIndex(window.name);
         var form = layui.form
             ,layer = layui.layer
             ,$ = layui.$ ;
+        var laydate = layui.laydate;
+
+        //同时绑定多个
+        lay('.datePicker').each(function(){
+            laydate.render({
+                elem: this
+                ,trigger: 'click'
+            });
+        });
+
+
         var parentLayer = parent.layer;
         var pWindow = parent ;
         form.on('submit(subBtn)', function(data){

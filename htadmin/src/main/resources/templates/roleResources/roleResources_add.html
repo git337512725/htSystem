@@ -18,18 +18,18 @@
 </fieldset>
 
 <form class="layui-form" action="">
-    <div class="layui-form-item">
-        <label class="layui-form-label">角色id</label>
-        <div class="layui-input-block">
-            <input type="text" name='roleKey'  lay-verify="required" lay-reqtext="角色id为必填项" placeholder="请输入角色id" autocomplete="off" class="layui-input">
+        <div class="layui-form-item">
+            <label class="layui-form-label">角色id</label>
+            <div class="layui-input-block">
+                  <input type="text" name='roleKey'  lay-verify="required" lay-reqtext="角色id为必填项" placeholder="请输入角色id" autocomplete="off" class="layui-input">
+            </div>
         </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">资源id</label>
-        <div class="layui-input-block">
-            <input type="text" name='resKey'  lay-verify="required" lay-reqtext="资源id为必填项" placeholder="请输入资源id" autocomplete="off" class="layui-input">
+        <div class="layui-form-item">
+            <label class="layui-form-label">资源id</label>
+            <div class="layui-input-block">
+                  <input type="text" name='resKey'  lay-verify="required" lay-reqtext="资源id为必填项" placeholder="请输入资源id" autocomplete="off" class="layui-input">
+            </div>
         </div>
-    </div>
     <div class="layui-form-item">
         <div class="layui-input-block">
             <button type="submit" class="layui-btn" lay-submit="" lay-filter="subBtn">提交</button>
@@ -37,11 +37,22 @@
     </div>
 </form>
 <script>
-    layui.use(['jquery','form'], function(){
+    layui.use(['jquery','form','laydate'], function(){
         var thisIndex = parent.layer.getFrameIndex(window.name);
         var form = layui.form
             ,layer = layui.layer
             ,$ = layui.$ ;
+        var laydate = layui.laydate;
+
+        //同时绑定多个
+        lay('.datePicker').each(function(){
+            laydate.render({
+                elem: this
+                ,trigger: 'click'
+            });
+        });
+
+
         var parentLayer = parent.layer;
         var pWindow = parent ;
         form.on('submit(subBtn)', function(data){

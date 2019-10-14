@@ -6,10 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="htcore" />
         <module name="htapi" />
-        <module name="htcodeplayer" />
         <module name="htadmin" />
+        <module name="htcodeplayer" />
+        <module name="htcore" />
       </profile>
     </annotationProcessing>
   </component>

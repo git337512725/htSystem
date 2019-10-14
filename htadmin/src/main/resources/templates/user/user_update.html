@@ -22,61 +22,65 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">名称</label>
                     <div class="layui-input-block">
-                        <input type="text" name='userName' th:value='${user.userName}' lay-verify="required" lay-reqtext="名称为必填项" placeholder="请输入名称" autocomplete="off" class="layui-input">
+                                <input type="text" name='userName'  th:value='${user.userName}' lay-verify="required" lay-reqtext="名称为必填项" placeholder="请输入名称" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">密码</label>
                     <div class="layui-input-block">
-                        <input type="text" name='password' th:value='${user.password}' lay-verify="required" lay-reqtext="密码为必填项" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                                <input type="text" name='password'  th:value='${user.password}' lay-verify="required" lay-reqtext="密码为必填项" placeholder="请输入密码" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">状态0启用1禁用</label>
                     <div class="layui-input-block">
-                        <input type="text" name='enable' th:value='${user.enable}' lay-verify="required" lay-reqtext="状态0启用1禁用为必填项" placeholder="请输入状态0启用1禁用" autocomplete="off" class="layui-input">
+                                                <select name='enable'  lay-verify="required">
+                                                    <option value="">请选择</option>
+                                                        <option value="0">启用</option>
+                                                        <option value="1">禁用</option>
+                                                </select>
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">手机号码</label>
                     <div class="layui-input-block">
-                        <input type="text" name='phoneNo' th:value='${user.phoneNo}' lay-verify="required" lay-reqtext="手机号码为必填项" placeholder="请输入手机号码" autocomplete="off" class="layui-input">
+                                <input type="text" name='phoneNo'  th:value='${user.phoneNo}' lay-verify="required" lay-reqtext="手机号码为必填项" placeholder="请输入手机号码" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">邮箱</label>
                     <div class="layui-input-block">
-                        <input type="text" name='mail' th:value='${user.mail}' lay-verify="required" lay-reqtext="邮箱为必填项" placeholder="请输入邮箱" autocomplete="off" class="layui-input">
+                                <input type="text" name='mail'  th:value='${user.mail}' lay-verify="required" lay-reqtext="邮箱为必填项" placeholder="请输入邮箱" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">添加时间</label>
                     <div class="layui-input-block">
-                        <input type="text" name='addTime' th:value='${user.addTime}' lay-verify="required" lay-reqtext="添加时间为必填项" placeholder="请输入添加时间" autocomplete="off" class="layui-input">
+                                                <input type="text" name='addTime'  th:value='${user.addTime}' lay-verify="required" lay-reqtext="添加时间为必填项" placeholder="请输入添加时间" autocomplete="off" class="layui-input datePicker">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">部门ID</label>
                     <div class="layui-input-block">
-                        <input type="text" name='deptId' th:value='${user.deptId}' lay-verify="required" lay-reqtext="部门ID为必填项" placeholder="请输入部门ID" autocomplete="off" class="layui-input">
+                                <input type="text" name='deptId'  th:value='${user.deptId}' lay-verify="required" lay-reqtext="部门ID为必填项" placeholder="请输入部门ID" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">部门名称</label>
                     <div class="layui-input-block">
-                        <input type="text" name='deptName' th:value='${user.deptName}' lay-verify="required" lay-reqtext="部门名称为必填项" placeholder="请输入部门名称" autocomplete="off" class="layui-input">
+                                <input type="text" name='deptName'  th:value='${user.deptName}' lay-verify="required" lay-reqtext="部门名称为必填项" placeholder="请输入部门名称" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">性别</label>
                     <div class="layui-input-block">
-                        <input type="text" name='sex' th:value='${user.sex}' lay-verify="required" lay-reqtext="性别为必填项" placeholder="请输入性别" autocomplete="off" class="layui-input">
+                                <input type="text" name='sex'  th:value='${user.sex}' lay-verify="required" lay-reqtext="性别为必填项" placeholder="请输入性别" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">简介</label>
                     <div class="layui-input-block">
-                        <input type="text" name='info' th:value='${user.info}' lay-verify="required" lay-reqtext="简介为必填项" placeholder="请输入简介" autocomplete="off" class="layui-input">
+                                <input type="text" name='info'  th:value='${user.info}' lay-verify="required" lay-reqtext="简介为必填项" placeholder="请输入简介" autocomplete="off" class="layui-input">
                     </div>
                 </div>
     <div class="layui-form-item">
@@ -86,11 +90,22 @@
     </div>
 </form>
 <script>
-    layui.use(['jquery','form'], function(){
+    layui.use(['jquery','form','laydate'], function(){
         var thisIndex = parent.layer.getFrameIndex(window.name);
         var form = layui.form
             ,layer = layui.layer
             ,$ = layui.$ ;
+
+        var laydate = layui.laydate;
+
+        //同时绑定多个
+        lay('.datePicker').each(function(){
+            laydate.render({
+                elem: this
+                ,trigger: 'click'
+            });
+        });
+
         var parentLayer = parent.layer;
         var pWindow = parent ;
         form.on('submit(subBtn)', function(data){

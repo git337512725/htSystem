@@ -22,37 +22,37 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">部门名称</label>
                     <div class="layui-input-block">
-                        <input type="text" name='deptName' th:value='${dept.deptName}' lay-verify="required" lay-reqtext="部门名称为必填项" placeholder="请输入部门名称" autocomplete="off" class="layui-input">
+                                <input type="text" name='deptName'  th:value='${dept.deptName}' lay-verify="required" lay-reqtext="部门名称为必填项" placeholder="请输入部门名称" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">部门描述</label>
                     <div class="layui-input-block">
-                        <input type="text" name='deptDesc' th:value='${dept.deptDesc}' lay-verify="required" lay-reqtext="部门描述为必填项" placeholder="请输入部门描述" autocomplete="off" class="layui-input">
+                                <input type="text" name='deptDesc'  th:value='${dept.deptDesc}' lay-verify="required" lay-reqtext="部门描述为必填项" placeholder="请输入部门描述" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">0 启用 1 禁用</label>
                     <div class="layui-input-block">
-                        <input type="text" name='enable' th:value='${dept.enable}' lay-verify="required" lay-reqtext="0 启用 1 禁用为必填项" placeholder="请输入0 启用 1 禁用" autocomplete="off" class="layui-input">
+                                <input type="text" name='enable'  th:value='${dept.enable}' lay-verify="required" lay-reqtext="0 启用 1 禁用为必填项" placeholder="请输入0 启用 1 禁用" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">上级部们</label>
                     <div class="layui-input-block">
-                        <input type="text" name='parentId' th:value='${dept.parentId}' lay-verify="required" lay-reqtext="上级部们为必填项" placeholder="请输入上级部们" autocomplete="off" class="layui-input">
+                                <input type="text" name='parentId'  th:value='${dept.parentId}' lay-verify="required" lay-reqtext="上级部们为必填项" placeholder="请输入上级部们" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">排序</label>
                     <div class="layui-input-block">
-                        <input type="text" name='sort' th:value='${dept.sort}' lay-verify="required" lay-reqtext="排序为必填项" placeholder="请输入排序" autocomplete="off" class="layui-input">
+                                <input type="text" name='sort'  th:value='${dept.sort}' lay-verify="required" lay-reqtext="排序为必填项" placeholder="请输入排序" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">上级部们名称</label>
                     <div class="layui-input-block">
-                        <input type="text" name='parentName' th:value='${dept.parentName}' lay-verify="required" lay-reqtext="上级部们名称为必填项" placeholder="请输入上级部们名称" autocomplete="off" class="layui-input">
+                                <input type="text" name='parentName'  th:value='${dept.parentName}' lay-verify="required" lay-reqtext="上级部们名称为必填项" placeholder="请输入上级部们名称" autocomplete="off" class="layui-input">
                     </div>
                 </div>
     <div class="layui-form-item">
@@ -62,11 +62,22 @@
     </div>
 </form>
 <script>
-    layui.use(['jquery','form'], function(){
+    layui.use(['jquery','form','laydate'], function(){
         var thisIndex = parent.layer.getFrameIndex(window.name);
         var form = layui.form
             ,layer = layui.layer
             ,$ = layui.$ ;
+
+        var laydate = layui.laydate;
+
+        //同时绑定多个
+        lay('.datePicker').each(function(){
+            laydate.render({
+                elem: this
+                ,trigger: 'click'
+            });
+        });
+
         var parentLayer = parent.layer;
         var pWindow = parent ;
         form.on('submit(subBtn)', function(data){

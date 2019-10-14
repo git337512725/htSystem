@@ -18,42 +18,42 @@
 </fieldset>
 
 <form class="layui-form" action="">
-    <div class="layui-form-item">
-        <label class="layui-form-label">角色id</label>
-        <div class="layui-input-block">
-            <input type="text" name='roleKey'  lay-verify="required" lay-reqtext="角色id为必填项" placeholder="请输入角色id" autocomplete="off" class="layui-input">
+        <div class="layui-form-item">
+            <label class="layui-form-label">角色id</label>
+            <div class="layui-input-block">
+                  <input type="text" name='roleKey'  lay-verify="required" lay-reqtext="角色id为必填项" placeholder="请输入角色id" autocomplete="off" class="layui-input">
+            </div>
         </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">角色描述</label>
-        <div class="layui-input-block">
-            <input type="text" name='roleDesc'  lay-verify="required" lay-reqtext="角色描述为必填项" placeholder="请输入角色描述" autocomplete="off" class="layui-input">
+        <div class="layui-form-item">
+            <label class="layui-form-label">角色描述</label>
+            <div class="layui-input-block">
+                  <input type="text" name='roleDesc'  lay-verify="required" lay-reqtext="角色描述为必填项" placeholder="请输入角色描述" autocomplete="off" class="layui-input">
+            </div>
         </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">父角色id</label>
-        <div class="layui-input-block">
-            <input type="text" name='pRoleKey'  lay-verify="required" lay-reqtext="父角色id为必填项" placeholder="请输入父角色id" autocomplete="off" class="layui-input">
+        <div class="layui-form-item">
+            <label class="layui-form-label">父角色id</label>
+            <div class="layui-input-block">
+                  <input type="text" name='pRoleKey'  lay-verify="required" lay-reqtext="父角色id为必填项" placeholder="请输入父角色id" autocomplete="off" class="layui-input">
+            </div>
         </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">父角色描述</label>
-        <div class="layui-input-block">
-            <input type="text" name='pRoleDesc'  lay-verify="required" lay-reqtext="父角色描述为必填项" placeholder="请输入父角色描述" autocomplete="off" class="layui-input">
+        <div class="layui-form-item">
+            <label class="layui-form-label">父角色描述</label>
+            <div class="layui-input-block">
+                  <input type="text" name='pRoleDesc'  lay-verify="required" lay-reqtext="父角色描述为必填项" placeholder="请输入父角色描述" autocomplete="off" class="layui-input">
+            </div>
         </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">0 启用 1 禁用</label>
-        <div class="layui-input-block">
-            <input type="text" name='enable'  lay-verify="required" lay-reqtext="0 启用 1 禁用为必填项" placeholder="请输入0 启用 1 禁用" autocomplete="off" class="layui-input">
+        <div class="layui-form-item">
+            <label class="layui-form-label">0 启用 1 禁用</label>
+            <div class="layui-input-block">
+                  <input type="text" name='enable'  lay-verify="required" lay-reqtext="0 启用 1 禁用为必填项" placeholder="请输入0 启用 1 禁用" autocomplete="off" class="layui-input">
+            </div>
         </div>
-    </div>
-    <div class="layui-form-item">
-        <label class="layui-form-label">排序</label>
-        <div class="layui-input-block">
-            <input type="text" name='sort'  lay-verify="required" lay-reqtext="排序为必填项" placeholder="请输入排序" autocomplete="off" class="layui-input">
+        <div class="layui-form-item">
+            <label class="layui-form-label">排序</label>
+            <div class="layui-input-block">
+                  <input type="text" name='sort'  lay-verify="required" lay-reqtext="排序为必填项" placeholder="请输入排序" autocomplete="off" class="layui-input">
+            </div>
         </div>
-    </div>
     <div class="layui-form-item">
         <div class="layui-input-block">
             <button type="submit" class="layui-btn" lay-submit="" lay-filter="subBtn">提交</button>
@@ -61,11 +61,22 @@
     </div>
 </form>
 <script>
-    layui.use(['jquery','form'], function(){
+    layui.use(['jquery','form','laydate'], function(){
         var thisIndex = parent.layer.getFrameIndex(window.name);
         var form = layui.form
             ,layer = layui.layer
             ,$ = layui.$ ;
+        var laydate = layui.laydate;
+
+        //同时绑定多个
+        lay('.datePicker').each(function(){
+            laydate.render({
+                elem: this
+                ,trigger: 'click'
+            });
+        });
+
+
         var parentLayer = parent.layer;
         var pWindow = parent ;
         form.on('submit(subBtn)', function(data){

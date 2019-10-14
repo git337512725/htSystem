@@ -22,13 +22,13 @@
                 <div class="layui-form-item">
                     <label class="layui-form-label">用户id</label>
                     <div class="layui-input-block">
-                        <input type="text" name='userId' th:value='${userRole.userId}' lay-verify="required" lay-reqtext="用户id为必填项" placeholder="请输入用户id" autocomplete="off" class="layui-input">
+                                <input type="text" name='userId'  th:value='${userRole.userId}' lay-verify="required" lay-reqtext="用户id为必填项" placeholder="请输入用户id" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">角色识别key</label>
                     <div class="layui-input-block">
-                        <input type="text" name='roleKey' th:value='${userRole.roleKey}' lay-verify="required" lay-reqtext="角色识别key为必填项" placeholder="请输入角色识别key" autocomplete="off" class="layui-input">
+                                <input type="text" name='roleKey'  th:value='${userRole.roleKey}' lay-verify="required" lay-reqtext="角色识别key为必填项" placeholder="请输入角色识别key" autocomplete="off" class="layui-input">
                     </div>
                 </div>
     <div class="layui-form-item">
@@ -38,11 +38,22 @@
     </div>
 </form>
 <script>
-    layui.use(['jquery','form'], function(){
+    layui.use(['jquery','form','laydate'], function(){
         var thisIndex = parent.layer.getFrameIndex(window.name);
         var form = layui.form
             ,layer = layui.layer
             ,$ = layui.$ ;
+
+        var laydate = layui.laydate;
+
+        //同时绑定多个
+        lay('.datePicker').each(function(){
+            laydate.render({
+                elem: this
+                ,trigger: 'click'
+            });
+        });
+
         var parentLayer = parent.layer;
         var pWindow = parent ;
         form.on('submit(subBtn)', function(data){
